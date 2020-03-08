@@ -85,3 +85,4 @@ Volgende personen hebben bijgedragen aan deze sjablonen:
 - Patrick Van Brussel
 - Simon Rondelez
 
+# bachelorproef
