@@ -16,9 +16,10 @@
 % dat je in ``biblatex''-modus opslaat: File > Switch to BibLaTeX mode.
 
 \documentclass{voorstel}
-
+\bibliography{voorstel}
 \usepackage{lipsum}
-
+\usepackage{graphicx}
+\graphicspath{{.}}
 %------------------------------------------------------------------------------
 % Metadata over het voorstel
 %------------------------------------------------------------------------------
@@ -26,24 +27,25 @@
 %---------- Titel & auteur ----------------------------------------------------
 
 % TODO: geef werktitel van je eigen voorstel op
-\PaperTitle{Titel voorstel}
+\PaperTitle{Technieken en methodieken om AI en AR toe te passen bij de optimalisatie van Wayfinding: een vergelijkende studie en proof-of-concept}
 \PaperType{Onderzoeksvoorstel Bachelorproef 2019-2020} % Type document
 
 % TODO: vul je eigen naam in als auteur, geef ook je emailadres mee!
-\Authors{Steven Stevens\textsuperscript{1}} % Authors
-\CoPromotor{Piet Pieters\textsuperscript{2} (Bedrijfsnaam)}
+\Authors{Rob De Putter\textsuperscript{1}} % Authors
+\CoPromotor{Thijs Morlion\textsuperscript{2} (In The Pocket)}
 \affiliation{\textbf{Contact:}
-  \textsuperscript{1} \href{mailto:steven.stevens.u1234@student.hogent.be}{steven.stevens.u1234@student.hogent.be};
-  \textsuperscript{2} \href{mailto:piet.pieters@acme.be}{piet.pieters@acme.be};
+  \textsuperscript{1} \href{mailto:rob.deputter@student.hogent.be}{rob.deputter@student.hogent.be};
+  \textsuperscript{2} \href{mailto:thijs.morlion@inthepocket.mobi}{thijs.morlion@inthepocket.mobi};
 }
 
 %---------- Abstract ----------------------------------------------------------
 
-\Abstract{Hier schrijf je de samenvatting van je voorstel, als een doorlopende tekst van één paragraaf. Wat hier zeker in moet vermeld worden: \textbf{Context} (Waarom is dit werk belangrijk?); \textbf{Nood} (Waarom moet dit onderzocht worden?); \textbf{Taak} (Wat ga je (ongeveer) doen?); \textbf{Object} (Wat staat in dit document geschreven?); \textbf{Resultaat} (Wat verwacht je van je onderzoek?); \textbf{Conclusie} (Wat verwacht je van van de conclusies?); \textbf{Perspectief} (Wat zegt de toekomst voor dit werk?).
+\Abstract{Deze bachelorproef staat in het algemeen belang om “In The Pocket” te assisteren bij het optimaliseren van een wayfinding applicatie, zij zullen nood hebben aan verschillende AI en AR technieken. Omtrent de samenhang van deze technologieën is er reeds weinig onderzoek gedaan, waardoor het tnog onduidelijk is welke van deze goede prestaties leveren. Bij deze zal ik het bedrijf helpen door een duidelijk overzicht (m.b.v. een proof-of-concept) te creëren, zodat zij de juiste beslissing kunnen nemen.
 
-Bij de sleutelwoorden geef je het onderzoeksdomein, samen met andere sleutelwoorden die je werk beschrijven.
+Als eerste bevat dit voorstel de verschillende methodologieën die ik zal toepassen om tot een geschikt eindresultaat te komen, hierin wordt beter beschreven hoe ik het onderzoek zal verrichten en op welke manier ik mijn conclusies zal trekken. Ten tweede omvat dit werk de mogelijke resultaten die ik mogelijks zal kunnen constateren uit het toekomstig diepgaand onderzoek. Ten slotte zal dit werk de verschillende mogelijke conclusies bevatten die ik heb kunnen trekken, hieruit zal een overzicht vloeien die de verschillende algoritmes en/of aanpakken zal etaleren.
 
-Vergeet ook niet je co-promotor op te geven.
+Uit dit onderzoek verwacht ik een beter beeld te kunnen scheppen van welke mogelijkheden er zijn om de uitwerking te kunnen realiseren van een goed werkende wayfinding applicatie.
+
 }
 
 %---------- Onderzoeksdomein en sleutelwoorden --------------------------------
@@ -65,7 +67,7 @@ Vergeet ook niet je co-promotor op te geven.
 %
 % De andere sleutelwoorden zijn vrij te kiezen
 
-\Keywords{Onderzoeksdomein. Keyword1 --- Keyword2 --- Keyword3} % Keywords
+\Keywords{Onderzoeksdomein:  Mobiele applicatieontwikkeling --- Artificiële intelligentie (AI) --- Augmented reality (AR) --- Wayfinding} % Keywords
 \newcommand{\keywordname}{Sleutelwoorden} % Defines the keywords heading name
 
 %---------- Titel, inhoud -----------------------------------------------------
