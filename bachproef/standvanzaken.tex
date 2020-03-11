@@ -19,7 +19,10 @@ Objectdetectie zal in de wayfinding applicatie er voor zorgen dat de omgeving op
 \subsection{Objectherkenning vs. Objectdetectie}
 In Artificiële intelligentie heeft men twee verschillende manieren om objecten te identificeren, objectherkenning en objectdetectie. Het herkenningsproces is zeer gelijkaardig, maar toch zijn er zekere verschillen bij de uitvoering. Objectdetectie kan men beschouwen als een subset van objectherkenning, men zal de objecten herkennen op een simultane manier, maar bij objectdetectie wordt het object ook gelocaliseerd in de afbeelding. In de onderstaande afbeelding kan men het verschil duidelijk waarnemen, objectherkenning (links) en objectdetectie (rechts).
 
-\includegraphics[scale=0.5]{objectdetectie.png}
+\begin{center}
+	\includegraphics[scale=0.45]{objectdetectie.png}
+\end{center}
+
 
 \subsection{Werking van objectherkenning}
 Om objectherkenning toe te passen kan je gebruik maken van twee verschillende manieren, namelijk 'Machine Learning' en 'Deep learning'. Beide technieken zullen objecten gaan herkennen, maar ze zijn verschillend op vlak van uitvoering.
@@ -27,18 +30,34 @@ Om objectherkenning toe te passen kan je gebruik maken van twee verschillende ma
 \subsubsection{Machine learing}
 Machine learning maakt gebruik van classificatie om een bepaald object te herkennen. Ten eerste zal men een trainingset opstellen, dit gebeurt door een verzameling van afbeeldingen samen te stellen en vervolgens de relevante punten aan te duiden. Het is zeer belangrijk om de juiste relevante punten aan te duiden, anders zal het systeem verkeerd getraind worden, waardoor men vervolgens een verkeerde output zal verkrijgen. Deze punten zullen er voor zorgen dat het systeem verschillende categorieën herkent. Vervolgens zal het leermodel deze informatie gebruiken om nieuwe objecten (objecten die nog niet gekend zijn in de trainingset) te analyseren en te classificeren.
 
-\includegraphics[scale=0.4]{machinelearning.png}
+\begin{center}
+	\includegraphics[scale=0.4]{machinelearning.png}
+\end{center}
 
 \subsubsection{Deep learning}
 Deep learning maakt gebruik van convulationele neurale netwerken (CNN) om objecten te herkennen. Een CNN kan automatisch de aanhangende kenmerken van een object leren om dat object te identificeren, dit betekent dat een CNN bijvoorbeeld het verschil tussen auto's en vrachtwagens kan herkennen door middel van duizenden afbeeldingen te analyseren en vervolgens te leren welke kenmerken juist verschillend zijn.
 
-\includegraphics[scale=0.6]{deeplearning.png}
+\begin{center}
+	\includegraphics[scale=0.47]{deeplearning.png}
+\end{center}
+
 \section{AR (Augmented reality)}
-Augmented reality (AR) is een interactieve ervaring van de echte wereld waarin objecten die zich in de echte wereld bevinden worden versterkt door computergegenereerde objecten, in een wayfinding applicatie gebeurt dit door middel van pijlen die de route aangeven.
+Het concept AR is vandaag de dag niet meer uit het straatbeeld weg te denken, het wordt bijvoorbeeld gebruikt bij de Instagram -en Snapchat filters. Augmented reality of AR is een interactieve ervaring met de omgeving waarin objecten die zich in de echte wereld bevinden worden versterkt door computergegenereerde objecten. AR is iets wat al even bestaat, het werd bijvoorbeeld al gebruikt bij één van de eerste straaljagers, het visier van de piloot wordt in dit voorbeeld ondersteund door een computergegenereerd object dat de vijand zou moeten lokaliseren. Augmented reality werd pas populair bij de modale mens wanneer Naintic Pokemon Go lanceerde, het werd één van de meest gekende smarthonegames. In 2017 introduceerde Android en Apple, AR Core en AR Kit, het werd vervolgens voor developers veel eenvoudiger om AR-applicaties te creëren.
 
-Het doel van Augemented reality in deze bachelorproef is om de route op een zo efficiënt mogelijke manier aan te geven, dit betekent dat er geen pijlen door objecten mogen gaan.
+Het doel van Augemented reality in deze bachelorproef is om de route op een zo efficiënt mogelijke manier aan te geven, dit betekent dat er geen pijlen door objecten mogen gaan. Om een beeld te kunnen scheppen over het effectieve doeleinde, heeft men alvast een voorbeeldfoto toegevoegd.
 
-\includegraphics[scale=0.3]{wayfinding.png}
+\begin{center}
+	\includegraphics[scale=0.25]{wayfinding.png}
+\end{center}
+
+\subsection{Werking van Augmented realtiy}
+Augmented reality kan momenteel op drie verschillende manieren worden uitgewerkt, namelijk door middel van SLAM, herkenning gebaseerd en locatie gebaseerd.
+
+\subsubsection{SLAM (Simultaneous Localization and Mapping)}
+Simultaneous Localization and Mapping of SLAM is de manier die het meest effectief en efficiënt werkt. SLAM lokaliseert sensoren ten opzichte van hun omgeving en brengt tegelijkertijd de omgeving in kaart, het is dus een zeer goede aanpak om complexe AR-simulatieproblemen op te lossen. Het SLAM-systeem is in feite een set van algoritmen die gericht zijn op het oplossen van gelijktijdige lokalisatie en het in kaart brengen van problemen. De meeste Augmented realitykits zijn reeds uitgerust met de mogelijkheid tot een SLAM-aanpak.
+\subsubsection{Herkenning gebaseerd}
+
+\subsubsection{Locatie gebaseerd}
 \section{AI + AR}
 De samenhang van Artificiële intelligentie en Augmented reality is zeer cruciaal bij het optimaliseren van een wayfinding applicatie. Ten eerste is het belangrijk dat de objecten op een correcte manier worden herkend. Ten tweede is het zeer belangrijk dat de bevindingen van de objectherkenning op een correcte manier worden vertaald naar de AR omgeving. Dit stuk is het meeste cruciale punt van deze bachelorproef.
 
