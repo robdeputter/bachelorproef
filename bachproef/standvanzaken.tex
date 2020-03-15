@@ -10,19 +10,19 @@
 
 In dit deel zal men toespitsen op de werking van een wayfinding applicatie, bij uitstek de concrete werking van het AI/AR mechanisme.
 
-\section{AI (Artificiële intelligentie)}
+\section{Begrippen}
+\subsection{AI (Artificiële intelligentie)}
 Artificiële intelligentie of AI is een zeer groot fenomeen in de huidige IT-wereld. Men kan het beschrijven als intelligentie die wordt gedemonstreerd door machines. Op deze manier kunnen die apparaten de omgeving waarnemen en vervolgens acties ondernemen die het succesvol bereiken van een bepaald doel zal maximaliseren. In het algemeen staat de term AI ook gekend als de beschrijving van machines of computers die cognitieve acties uitvoeren die wij als mensen associeren met de menselijke geest. 
 
 In deze bachelorproef wordt AI toegepast op het vlak van objectdetectie, het is de meest cruciale factor om een wayfinding applicatie te optimaliseren.
 Objectdetectie zal in de wayfinding applicatie er voor zorgen dat de omgeving op een correcte manier wordt herkend, zo kan men een perfect beeld scheppen van welke objecten men afstand moet houden, bijvoorbeeld muren.
 
-\subsection{Objectherkenning vs. Objectdetectie}
+\subsubsection{Objectherkenning vs. Objectdetectie}
 In Artificiële intelligentie heeft men twee verschillende manieren om objecten te identificeren, objectherkenning en objectdetectie. Het herkenningsproces is zeer gelijkaardig, maar toch zijn er zekere verschillen bij de uitvoering. Objectdetectie kan men beschouwen als een subset van objectherkenning, men zal de objecten herkennen op een simultane manier, maar bij objectdetectie wordt het object ook gelocaliseerd in de afbeelding. In de onderstaande afbeelding kan men het verschil duidelijk waarnemen, objectherkenning (links) en objectdetectie (rechts).
 
 \begin{center}
-	\includegraphics[scale=0.45]{objectdetectie.png}
+	\includegraphics[scale=0.35]{objectdetectie.png}
 \end{center}
-
 
 \subsection{Werking van objectherkenning}
 Om objectherkenning toe te passen kan je gebruik maken van twee verschillende manieren, namelijk 'Machine Learning' en 'Deep learning'. Beide technieken zullen objecten gaan herkennen, maar ze zijn verschillend op vlak van uitvoering.
@@ -41,7 +41,7 @@ Deep learning maakt gebruik van convulationele neurale netwerken (CNN) om object
 	\includegraphics[scale=0.47]{deeplearning.png}
 \end{center}
 
-\section{AR (Augmented reality)}
+\subsection{AR (Augmented reality)}
 Het concept AR is vandaag de dag niet meer uit het straatbeeld weg te denken, het wordt bijvoorbeeld gebruikt bij de Instagram -en Snapchat filters. Augmented reality of AR is een interactieve ervaring met de omgeving waarin objecten die zich in de echte wereld bevinden worden versterkt door computergegenereerde objecten. AR is iets wat al even bestaat, het werd bijvoorbeeld al gebruikt bij één van de eerste straaljagers, het visier van de piloot wordt in dit voorbeeld ondersteund door een computergegenereerd object dat de vijand zou moeten lokaliseren. Augmented reality werd pas populair bij de modale mens wanneer Naintic Pokemon Go lanceerde, het werd één van de meest gekende smarthonegames. In 2017 introduceerde Android en Apple, AR Core en AR Kit, het werd vervolgens voor developers veel eenvoudiger om AR-applicaties te creëren.
 
 Het doel van Augemented reality in deze bachelorproef is om de route op een zo efficiënt mogelijke manier aan te geven, dit betekent dat er geen pijlen door objecten mogen gaan. Om een beeld te kunnen scheppen over het effectieve doeleinde, heeft men alvast een voorbeeldfoto toegevoegd.
@@ -64,7 +64,28 @@ Bij deze manier is het ook mogelijk om de positie en oriëntatie te berekenen. D
 \subsubsection{Locatie gebaseerd}
 Locatie gebaseerd of 'markerless augmented reality' is een AR-technologie die alleen gebruikt maakt van een GPS, digitaal kompas, snelheidsmeter of versnellingsmeter om gegevens over de locatie te verzamelen, de augmented reality visualisaties worden met behulp van deze informatie geactiveerd. Een smartphone heeft genoeg sensoren om deze manier te kunnen realiseren. 
 
-\section{AI + AR}
+\subsection{AI + AR}
 De samenhang van Artificiële intelligentie en Augmented reality is zeer cruciaal bij het optimaliseren van een wayfinding applicatie. Ten eerste is het belangrijk dat de objecten op een correcte manier worden herkend. Ten tweede is het zeer belangrijk dat de bevindingen van de objectherkenning op een correcte manier worden vertaald naar de AR omgeving. 
 
+\section{Literatuurstudie}
+
+In deze sectie zal men meer focussen op het onderzoek en de uitwerkingen die reeds werden gerealiseerd. Men zal deze algemene kennis kunnen gebruiken om mijn onderzoek te ondersteunen. Deze literatuurstudie staat ook in thema met de wayfinding-context, op deze manier is de verkregen informatie relevanter.
+
+In het algemeen kan ik op voorhand al besluiten dat er reeds weinig onderzoek is gedaan naar de samenhang van 'Artificiële intelligentie' en 'Augemented reality' binnen de wayfinding-context. De termen AI en AR zijn afzondelijk van elkaar zeer gekend in de IT-wereld, men kan dit zelfs niet meer uit het straatbeeld wegdenken. Door de grote belangstelling voor AI en AR, en de minieme huidige onderzoekstoestand binnen de wayfinding-context wordt deze bachelorproef alleen maar interessanter.
+
+\subsection{Artificiële intelligentie (AI)}
+
+\subsubsection{Objectherkenning}
+In het uitgave van ~\autocite{Liang2015}, \textcite{Liang2015} werd er onderzoek gedaan naar het gebruik van objectherkenning door middel van 'Convolutionele netwerken' of met andere woorden, 'Deep learning'. De auteurs werden geïnspireerd door 'Deep learning' omdat het reeds meerdere successen had geboekt bij andere computervisietaken. Omdat objectherkenning een zeer belangrijk factor is voor veel complexe systemen, wouden ze dit efficiënter maken en dus ook verbeteren, en dit door gebruik te maken van een geanvanceerde techniek, namelijk de convolutionele netwerken. 
+
+Tijdens hun onderzoek werd het netwerk getest door middel van meerdere datasets, namelijk CIFAR-10, CIFAR-100, MNIST en SVHN. Deze datasets zijn zeer handig wanneer men convolutionele netwerken wilt testen, men hoeft dus geen data meer te verzamelen om te kunnen observeren of een netwerk wel degelijk goed functioneert. Het vinden van goede datasets is een cruciale factor bij het gebruik van AI, indien deze niet voldoen aan de eisen kan men ook geen bruikbare conclusies opstellen.
+
+In het onderzoek verduidelijkt men ook nog eens het gebruik van 'Deep learning' zorgt voor betere resultaten. Het verhogen van de parameters in een CNN zorgde in het onderzoek voor nog een betere performantie, in tegenstelling met de 'gewone' feed-forward structuur. 
+
+Uit de conclusie van hun onderzoek kan men besluiten dat een RCNN (recurrent convolutioneel netwerk) betere resultaten opleverd. Een recurrent convolutioneel netwerk is uitgebreider CNN, men gaat meer recurrente verbindingen (of parameters) toevoegen in elke laag. Deze structuur maakte het mogelijk om meer diepgang te creëren, men ging met andere woorden meer informatie verkrijgen uit elke laag, waardoor men meer kans kreeg op het juist eindresultaat. In de laatste fase van het onderzoek kon men andermaal besluiten dat het netwerk nog efficiënter werkte, bij het toevoegen van (nog) meer parameters.
+
+\subsection{Augmented Reality (AR)}
+
+\subsubsection{Simultaneous Localization and Mapping (SLAM)}
+Het onderzoek van \autocite{Zhang2017} heeft als hoofddoel om het leven voor slechtzienden makkelijk te maken. Men wenst dit doel te bereiken met behulp van een indoor wayfinding applicatie te creëren die deze bepaald groep mensen zal begeleiden bij het vinden van de weg, specifiek in gebouwen. Dit onderzoek is zeer vergelijkbaar met deze bachelorproef, het eindproduct kent bijna een volledige gelijkenis. Men is er dan ook van overtuigt dat deze publicatie zal helpen bij het vinden van het gepaste eindresultaat.
 
