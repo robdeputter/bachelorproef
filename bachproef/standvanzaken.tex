@@ -44,7 +44,7 @@ Deep learning maakt gebruik van convulationele neurale netwerken (CNN) om object
 \subsection{AR (Augmented reality)}
 Het concept AR is vandaag de dag niet meer uit het straatbeeld weg te denken, het wordt bijvoorbeeld gebruikt bij de Instagram -en Snapchat filters. Augmented reality of AR is een interactieve ervaring met de omgeving waarin objecten die zich in de echte wereld bevinden worden versterkt door computergegenereerde objecten. AR is iets wat al even bestaat, het werd bijvoorbeeld al gebruikt bij één van de eerste straaljagers, het visier van de piloot wordt in dit voorbeeld ondersteund door een computergegenereerd object dat de vijand zou moeten lokaliseren. Augmented reality werd pas populair bij de modale mens wanneer Naintic Pokemon Go lanceerde, het werd één van de meest gekende smarthonegames. In 2017 introduceerde Android en Apple, AR Core en AR Kit, het werd vervolgens voor developers veel eenvoudiger om AR-applicaties te creëren.
 
-Het doel van Augemented reality in deze bachelorproef is om de route op een zo efficiënt mogelijke manier aan te geven, dit betekent dat er geen pijlen door objecten mogen gaan. Om een beeld te kunnen scheppen over het effectieve doeleinde, heeft men alvast een voorbeeldfoto toegevoegd.
+Het doel van Augemented reality in deze bachelorproef is om de route op een zo efficiënt mogelijke manier aan te geven, dit betekent dat er geen pijlen door objecten mogen gaan. Om een beeld te kunnen scheppen over het effectieve doeleinde, heeft men hieronder alvast een voorbeeldfoto toegevoegd.
 
 \begin{center}
 	\includegraphics[scale=0.25]{wayfinding.png}
@@ -55,6 +55,12 @@ Augmented reality kan momenteel op drie verschillende manieren worden uitgewerkt
 
 \subsubsection{SLAM (Simultaneous Localization and Mapping)}
 Simultaneous Localization and Mapping of SLAM is de manier die het meest effectief en efficiënt werkt. SLAM lokaliseert sensoren ten opzichte van hun omgeving en brengt tegelijkertijd de omgeving in kaart, het is dus een zeer goede aanpak om complexe AR-simulatieproblemen op te lossen. Het SLAM-systeem is in feite een set van algoritmen die gericht zijn op het oplossen van gelijktijdige lokalisatie en het in kaart brengen van problemen. De meeste Augmented realitykits zijn reeds uitgerust met de mogelijkheid tot een SLAM-aanpak.
+
+\begin{center}
+	\includegraphics[scale=0.6]{SLAM.png}
+\end{center}
+
+De bovenstaande foto toont een praktische uitwerking van SLAM. In de 2 bovenste foto's ziet men hoe de algoritmen de belangrijkste punten lokaliseert, daaronder ziet men hoe SLAM de omgeving in kaart brengt met behulp van de punten.
 
 \subsubsection{Herkenning gebaseerd}
 Herkenning gebaseerd gebruikt de camera van het gebruikte apparaat om bepaalde visuele markers of objecten te identificeren. Deze AR-technologie is bijgevolg zeer afhankelijk van de kwaliteit van de gebruikte camera, als deze de markers niet goed kan identificeren, dan zal het AR mechanisme niet goed werken.
@@ -67,6 +73,7 @@ Locatie gebaseerd of 'markerless augmented reality' is een AR-technologie die al
 \subsection{AI + AR}
 De samenhang van Artificiële intelligentie en Augmented reality is zeer cruciaal bij het optimaliseren van een wayfinding applicatie. Ten eerste is het belangrijk dat de objecten op een correcte manier worden herkend. Ten tweede is het zeer belangrijk dat de bevindingen van de objectherkenning op een correcte manier worden vertaald naar de AR omgeving. 
 
+\newpage
 \section{Literatuurstudie}
 
 In deze sectie zal men meer focussen op het onderzoek en de uitwerkingen die reeds werden gerealiseerd. Men zal deze algemene kennis kunnen gebruiken om mijn onderzoek te ondersteunen. Deze literatuurstudie staat ook in thema met de wayfinding-context, op deze manier is de verkregen informatie relevanter.
@@ -76,7 +83,7 @@ In het algemeen kan ik op voorhand al besluiten dat er reeds weinig onderzoek is
 \subsection{Artificiële intelligentie (AI)}
 
 \subsubsection{Objectherkenning}
-In het uitgave van ~\autocite{Liang2015}, \textcite{Liang2015} werd er onderzoek gedaan naar het gebruik van objectherkenning door middel van 'Convolutionele netwerken' of met andere woorden, 'Deep learning'. De auteurs werden geïnspireerd door 'Deep learning' omdat het reeds meerdere successen had geboekt bij andere computervisietaken. Omdat objectherkenning een zeer belangrijk factor is voor veel complexe systemen, wouden ze dit efficiënter maken en dus ook verbeteren, en dit door gebruik te maken van een geanvanceerde techniek, namelijk de convolutionele netwerken. 
+In het uitgave van ~\textcite{Liang2015}, (\citetitle{Liang2015}) werd er onderzoek gedaan naar het gebruik van objectherkenning door middel van 'Convolutionele netwerken' of met andere woorden, 'Deep learning'. De auteurs werden geïnspireerd door 'Deep learning' omdat het reeds meerdere successen had geboekt bij andere computervisietaken. Omdat objectherkenning een zeer belangrijk factor is voor veel complexe systemen, wouden ze dit efficiënter maken en dus ook verbeteren, en dit door gebruik te maken van een geanvanceerde techniek, namelijk de convolutionele netwerken. 
 
 Tijdens hun onderzoek werd het netwerk getest door middel van meerdere datasets, namelijk CIFAR-10, CIFAR-100, MNIST en SVHN. Deze datasets zijn zeer handig wanneer men convolutionele netwerken wilt testen, men hoeft dus geen data meer te verzamelen om te kunnen observeren of een netwerk wel degelijk goed functioneert. Het vinden van goede datasets is een cruciale factor bij het gebruik van AI, indien deze niet voldoen aan de eisen kan men ook geen bruikbare conclusies opstellen.
 
@@ -84,22 +91,31 @@ In het onderzoek verduidelijkt men ook nog eens het gebruik van 'Deep learning' 
 
 Uit de conclusie van hun onderzoek kan men besluiten dat een RCNN (recurrent convolutioneel netwerk) betere resultaten opleverd. Een recurrent convolutioneel netwerk is uitgebreider CNN, men gaat meer recurrente verbindingen (of parameters) toevoegen in elke laag. Deze structuur maakte het mogelijk om meer diepgang te creëren, men ging met andere woorden meer informatie verkrijgen uit elke laag, waardoor men meer kans kreeg op het juist eindresultaat. In de laatste fase van het onderzoek kon men andermaal besluiten dat het netwerk nog efficiënter werkte, bij het toevoegen van (nog) meer parameters.
 
+\begin{center}
+	\includegraphics{CNN_RCNN.png}
+\end{center}
 
-Objectherkenning kan ook rechtstreeks gebruikt worden om de juiste weg te berekenen, dit wordt aangetoond in de studie van \autocite{Haikun2017}. In deze paper werd een wayfinding-ontwerp voor een virtuele wereld geoptimaliseerd. Vroeger werd een wayfinding-ontwerp handmatig opgesteld, hierbij moest men rekening houden met talloze verschillende parameters die mogelijks kunnen veranderen. Zo is het mogelijk dat de menselijke factoren als omgevingsfactoren  kunnen veranderen, een statisch ontwerp creëren die steeds voldoet aan relevante eisen is dus niet haalbaar.
+Objectherkenning kan ook rechtstreeks gebruikt worden om de juiste weg te berekenen, dit wordt aangetoond in de studie van \textcite{Haikun2017} (\citetitle{Haikun2017}). In deze paper werd een wayfinding-ontwerp voor een virtuele wereld geoptimaliseerd. Vroeger werd een wayfinding-ontwerp handmatig opgesteld, hierbij moest men rekening houden met talloze verschillende parameters die mogelijks kunnen veranderen. Zo is het mogelijk dat de menselijke factoren als omgevingsfactoren  kunnen veranderen, een statisch ontwerp creëren die steeds voldoet aan relevante eisen is dus niet haalbaar.
 
 Om dit probleem op te lossen werd 'Way to Go!' gecreërd, dit is een systeem dat automatisch een dynamisch wayfinding-ontwerp kan genereren voor verschillende navigatiemogelijkheden. Het systeem werkt als volgt. Ten eerste moet men een navigatiescenario specifiëren, met moet met andere woorden een route uitstippelen. Ten tweede zal het systeem automatisch een geoptimaliseerd wayfinding-ontwerp creëren met borden die op de juiste manier zijn geplaatst, rekening houdend met de zichtbaarheid van menselijke agenten en de mogelijkheid om fouten te maken tijdens een navigatie.  In het onderzoek evalueert men de resultaten door verschillende wayfinding-ontwerpen te vergelijken en laten zien dat het geoptimaliseerde wayfinding-ontwerp voetgangers effectief en efficiënt naar hun bestemming kan leiden. De aanpak kan de ontwerper van het ontwerp ook helpen om de bereikbaarheid van een bestemming vanaf verschillende locaties te visualiseren en eventuele "blinde" zones te corrigeren met extra bewegwijzering.
 
 \subsubsection{Postionering}
+Positionering binnenin gebouwen is zeer belangrijk in de wayfinding-context, als men niet goed kan bepalen waar de gebruiker zich bevindt, dan is het zeker niet mogelijk om de gepaste route aan te tonen. Het onderzoek van \textcite{Hasan2019} (\citetitle{Hasan2019}) biedt hier een mogelijke oplossing voor, zij hebben verschillende 'draadloze' technieken onderzocht die de locatie binnenshuis kunnen bepalen. De traditionele GPS (Global positioning system) is wel gekend om de locatie buitenshuis te bepalen, maar deze voldoet meestal niet aan de benodigdheden voor binnenhuispositionering. De huidige techologie die hiervoor gekend staat is Wi-Fi positionering.
+
+In deze paper beschrijft men hoe men de 'indoor' positie kan bepalen door middel van Wi-Fi, Bluetooth, Radio-frequency Idenfication Service (RFID). Deze heeft men ook uitwerkt voor verschillende doelapplicaties die steeds gekoppeld zijn aan een bepaalde sector, bv. marketing and customer assistance, health sector, security, ...
+
+Uit hun conclusie kan men besluiten dat de nauwkeurigheid van de plaatsbepaling deels afhangt van de dichtheid van de toegangspunten en de standaardisatiepunten. Deze informatie kan van pas komen in typische openbare gebouwen zoals winkelcentra, universiteiten en luchthavens. In hun onderzoek werden ze ook geconfronteerd met bepaalde uitdagingen. Zo constateerden zij dat de resolutie van de plaatsbepaling drastisch verslechtert wanneer men gebruik maakt van een non-LOS multipath, in het onderzoek werden vervolgens enkele oplossingen voorgesteld die kunnen helpen bij de aanpak van deze uitdaging.
  
+
 \subsection{Augmented reality (AR)}
 
 \subsubsection{Simultaneous Localization and Mapping (SLAM)}
-Het onderzoek van \autocite{Zhang2017} heeft als hoofddoel om het leven voor slechtzienden makkelijk te maken. Men wenst dit doel te bereiken met behulp van een indoor wayfinding applicatie te creëren die deze bepaald groep mensen zal begeleiden bij het vinden van de weg, specifiek in gebouwen. Dit onderzoek is zeer vergelijkbaar met deze bachelorproef, het eindproduct kent bijna een grote gelijkenis, alleen wordt er in deze paper gebruik gemaakt van audio-ondersteuning. Men is er dan ook van overtuigt dat deze publicatie zal helpen bij het vinden van het gepaste eindresultaat.
+Het onderzoek van \textcite{Zhang2017} (\citetitle{Zhang2017}) heeft als hoofddoel om het leven voor slechtzienden makkelijk te maken. Men wenst dit doel te bereiken met behulp van een indoor wayfinding applicatie te creëren die deze bepaald groep mensen zal begeleiden bij het vinden van de weg, specifiek in gebouwen. Dit onderzoek is zeer vergelijkbaar met deze bachelorproef, het eindproduct kent bijna een grote gelijkenis, alleen wordt er in deze paper gebruik gemaakt van audio-ondersteuning. Men is er dan ook van overtuigt dat deze publicatie zal helpen bij het vinden van het gepaste eindresultaat.
 
 In dit onderzoek probeert men huidige SLAM-technieken te verbeteren, volgens de state-of-the-art werden er steeds fouten bevonden bij het bepalen van de correcte positie, de zogekende 6-DOF-fout. De gekende aanpassingen die werden toegepast tijdens het onderzoek verbeterden niet alleen de 6-DOF-fout, maar ook de rekentijd. Dit resulteert in een snellere response naar de eindgebruiker, wat alleen maar een positieve invloed heeft op de gebruiksvriendelijkheid. In het onderzoek werden ook experimenten uitgevoerd, deze toonden daadwerkelijk aan dat de effectiviteit van het navigeren wel degelijk werd verbeterd voor slechtziende mensen.
 
 \subsection{Artificiële intelligentie (AI) + Augmented reality (AR)}
-Die paper van \autocite{Pouria2016} zal zeer veel hulp bieden, het eindresultaat van dit onderzoek kent namelijk een zeer grote overeenkomst met de objectieven van deze bachelorproef. Dit onderzoek gebruikt evenals hetzelfde soort toestel om te communiceren met de gebruiker.
+Die paper van \textcite{Pouria2016} (\citetitle{Pouria2016}) zal zeer veel hulp bieden, het eindresultaat van dit onderzoek kent namelijk een zeer grote overeenkomst met de objectieven van deze bachelorproef. Dit onderzoek gebruikt evenals hetzelfde soort toestel om te communiceren met de gebruiker.
 
 In de uitwerking hield men rekening met de sensoren die men kan vinden in mobiele toestellen, hiermee ging men ook aan de slag. Deze sensoren hebben het mogelijk gemaakt om de locatie, koers en oriëntatie van de gebruiker te detecteren en om contextuele informatie uit verschillende bronnen van online gegevens te verkrijgen. Het combineren van de verkregen data van positionerings- en oriëntatiesensoren met camera's heeft het ook mogelijk gemaakt om praktische Augmented Reality (AR)-toepassingen op deze mobiele apparaten in te zetten. 
 
