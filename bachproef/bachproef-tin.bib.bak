@@ -138,10 +138,4 @@
   url    = {https://developer.apple.com/news/?id=06032019f},
 }
 
-@Article{ARCore2019,
-  author = {Wesley Akkerman},
-  date   = {2019},
-  url    = {https://www.want.nl/arcore-update-augmented-reality-google/},
-}
-
 @Comment{jabref-meta: databaseType:biblatex;}
