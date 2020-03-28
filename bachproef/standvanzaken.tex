@@ -114,7 +114,7 @@ Apple biedt een eigen AR-framework aan zijn developers, namelijk ARKit. Dit fram
 \begin{figure}[H]
 	\centering
 	\includegraphics[scale=0.2]{arkit.png}
-	\caption{Logo Google ARCore, \autocite{Apple2019}}
+	\caption{Logo ARKit, \autocite{Apple2019}}
 \end{figure}
 
 \subsubsection{Google ARCore}
@@ -126,11 +126,68 @@ De mogelijk bestaat om andere AR-frameworks zoals Unity, Unreal Engine, etc.  te
 	\includegraphics[scale=0.3]{ARCore.jpg}
 	\caption{Logo Google ARCore, \autocite{ARCore2019}}
 \end{figure}
-\subsection{AI}
-
 
 \subsection{AR + AI}
-Welke combinaties zijn mogelijk?
+Het vinden van de perfecte combinatie tussen AR en AI is geen eenvoudige taak en is vaak ook afwisselend van wat het doeleinde is, het artikel van \textcite{Toole2019} (\citetitle{Toole2019}) beschrijft heel duidelijk welke relevante technologiën men kan gebruiken. Er wordt ook besproken hoe geanvanceerd de huidige AI-technieken zijn, deze kunnen namelijk  verticale en horizontale vlakken detecteren, diepte- en segmentbeelden inschatten voor realistische occlusie en zelfs 3D-posities van objecten in real-time afleiden. Deze aspecten zijn van zeker van belang voor de wayfinding-applicatie.
+
+De meeste gebruikelijke manier om deze 2 technieken (AI en AR) te combineren is door afbeeldingen van een scène te nemen, die gegevens door een model te laten lopen en de modeluitgang te gebruiken om effecten binnen de scène te triggeren. De 2 AI-technieken die worden besproken zijn Core ML en Tensorflow Lite.
+
+De blogpost van \autocite{Girish2020} (\citetitle{Girish2020}) geeft nog een vierde framework waar men zeker rekening moet mee houden, namelijk 'Vuforia'.
+
+\subsubsection{Core ML}
+Core ML is een AI-framework dat wordt aangeboden door Apple, dit is vervolgens ook alleen te gebruiken voor iOS-applicaties. Het framework ondersteunt het analyseren van beelden, Natural Language voor het verwerken van tekst, Speech voor het omzetten van audio naar tekst en SoundAnalysis voor het identificeren van geluiden in audio. Core ML zelf bouwt voort op low-level primitieven zoals Accelerate en BNNS, evenals Metal Performance Shaders. Een  belangrijke factor is inmiddels ook dat dit framework gratis is. \autocite{AppleML2020}
+
+
+\begin{figure}[H]
+	\centering
+	\includegraphics[scale=0.65]{mlcore.png}
+	\caption{Logo ML Core, \autocite{AppleML2020}}
+\end{figure}
+
+\subsubsection{TensorFlow lite}
+TensorFlow is zeer gekend in de AI-wereld, het bedrijf biedt talloze frameworks aan om AI op een eenvoudige manier te integreren in jouw gewenste applicatie. TenserFlow lite werd speciaal gecreëerd om AI te kunnen toepassen met behulp van inputs die worden voorzien door een smartphone, zo is het mogelijk om 'image classfication' en 'object detection' toe te passen, met alleen de input van de smartphonecamera. Dit framework is vervolgens ook gratis. \autocite{TensorFlowLite2020}
+
+\begin{figure}[H]
+	\centering
+	\includegraphics[scale=0.12]{tensorflowlite.png}
+	\caption{Logo TensorFlow Lite, \autocite{TensorFlowLite2020}}
+\end{figure}
+
+\subsubsection{Vuforia}
+Vuforia is een Augmented Reality SDK die het voor bedrijven mogelijk  om mobiel gerichte, immersieve AR-ervaringen op te bouwen. Vuforia kan gebruikt worden voor iOS -en Androidapplicaties. Deze SDK is niet gratis, het pro-pakket heeft zelfs een relatief hoge prijs voor studenten, maar in dit pakket kan men wel gebruik maken van de reeds geïntegreerde AI-features. \autocite{Girish2020}
+
+\subsubsection{Google Vision API}
+Google biedt ook een API die het mogelijk maakt om AI te betrekken bij de AR-applicatie. De API werkt als volgt, de applicatie neemt een foto van de waarneming, stuurt deze vervolgens door naar de API en zal daaropvolgend een antwoord bieden waarin de waargenomen objecten worden meegedeeld. Deze API is niet volledig gratis, vanaf een bepaald aantal 'calls' zal men een gepast bedrag moeten neerleggen.
+
+\subsection{Overzicht AR}
+\begin{table}[H]
+	\centering
+	\begin{tabular}{|l|c|c|c|c|}
+		\hline
+		& \multicolumn{1}{l|}{Unity 3D} & \multicolumn{1}{l|}{Unreal Engine} & \multicolumn{1}{l|}{ARKit} & \multicolumn{1}{l|}{ARCore} \\ \hline
+		\textbf{Compatibel met iOS}     & Ja                            & Ja                                 & Ja                         & Ja                          \\ \hline
+		\textbf{Compatibel met Android} & Ja                            & Ja                                 & Nee                        & Ja                          \\ \hline
+		\textbf{Provider}               & Unity                         & Unreal Engine                      & Apple                      & Google                      \\ \hline
+		\textbf{Documentatie}           & Ja                            & Ja                                 & Ja                         & Ja                          \\ \hline
+	\end{tabular}
+	\caption{Vergelijking AR frameworks}
+\end{table}
+
+\subsection{Overzicht AR + AI}
+\begin{table}[H]
+	\begin{tabular}{|l|c|c|c|c|}
+		\hline
+		& Core ML       & TensorFlow lite                                                                    & Vuforia                                                                                                                     & Vision API                                                                            \\ \hline
+		\textbf{\begin{tabular}[c]{@{}l@{}}Compatibel met\\  iOS\end{tabular}}             & Ja            & Ja                                                                                 & Ja                                                                                                                          & Ja                                                                                    \\ \hline
+		\textbf{\begin{tabular}[c]{@{}l@{}}Compatibel met \\ Android\end{tabular}}         & Nee           & Ja                                                                                 & Ja                                                                                                                          & Ja                                                                                    \\ \hline
+		\textbf{Provider}                                                                  & Apple         & TensorFlow                                                                         & Vuforia                                                                                                                     & Google                                                                                \\ \hline
+		\textbf{Prijs}                                                                     & Gratis        & Gratis                                                                             & \begin{tabular}[c]{@{}c@{}}Betalend, men \\ heeft 3 pakketten. \\ Basic, \\ Basic + cloud en\\  Pro (incl. AI)\end{tabular} & \begin{tabular}[c]{@{}c@{}}Gratis tot een\\  bepaald aantal \\ API calls\end{tabular} \\ \hline
+		\textbf{\begin{tabular}[c]{@{}l@{}}Limiet op (API) \\ calls\end{tabular}}          & Ongelimiteerd & Ongelimiteerd                                                                      & \begin{tabular}[c]{@{}c@{}}Ongelimiteerd, \\ indien men \\ een betalend \\ pakket aanschaft\end{tabular}                    & 1000 / maand                                                                          \\ \hline
+		\textbf{\begin{tabular}[c]{@{}l@{}}Compatibel met\\ (AR frameworks):\end{tabular}} & ARKit         & \begin{tabular}[c]{@{}c@{}}Unity3D, Unreal \\ Engine,\\ ARKit, ARCore\end{tabular} & \begin{tabular}[c]{@{}c@{}}Unity3D, maar\\ Vuforia is een\\ AR-SDK op \\ zichzelf\end{tabular}                              & \begin{tabular}[c]{@{}c@{}}Unity3D, Unreal \\ Engine,\\ ARKit, ARCore\end{tabular}    \\ \hline
+		\textbf{Documentatie}                                                              & Ja            & Ja                                                                                 & Ja                                                                                                                          & Ja                                                                                    \\ \hline
+	\end{tabular}
+	\caption{Vergelijking AR + AI frameworks}
+\end{table}
 \newpage
 \section{Literatuurstudie}
 
