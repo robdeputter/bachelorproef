@@ -8,17 +8,17 @@
 % Pas na deze inleidende paragraaf komt de eerste sectiehoofding.
 
 
-In dit deel zal men toespitsen op de werking van een wayfinding applicatie, bij uitstek de concrete werking van het AI/AR mechanisme.
+In dit deel zal men toespitsen op de werking van een wayfinding applicatie, bij uitstek de concrete werking van het AI/AR-mechanisme.
 
 \section{Begrippen}
 \subsection{AI (Artificiële intelligentie)}
-Artificiële intelligentie of AI is een zeer groot fenomeen in de huidige IT-wereld. Men kan het beschrijven als intelligentie die wordt gedemonstreerd door machines. Op deze manier kunnen die apparaten de omgeving waarnemen en vervolgens acties ondernemen die het succesvol bereiken van een bepaald doel zal maximaliseren. In het algemeen staat de term AI ook gekend als de beschrijving van machines of computers die cognitieve acties uitvoeren die wij als mensen associeren met de menselijke geest.
+Artificiële intelligentie of AI is een zeer groot fenomeen in de huidige IT-wereld. Men kan het beschrijven als intelligentie die wordt gedemonstreerd door machines. Op deze manier kunnen die apparaten de omgeving waarnemen en vervolgens acties ondernemen die het succesvol bereiken van een bepaald doel zal maximaliseren. In het algemeen staat de term AI ook gekend als de beschrijving van machines of computers die cognitieve acties uitvoeren die wij als mensen associëren met de menselijke geest.
 
 In deze bachelorproef wordt AI toegepast op het vlak van objectdetectie, het is de meest cruciale factor om een wayfinding applicatie te optimaliseren.
-Objectdetectie zal in de wayfinding applicatie er voor zorgen dat de omgeving op een correcte manier wordt herkend, zo kan men een perfect beeld scheppen van welke objecten men afstand moet houden, bijvoorbeeld muren.
+Objectdetectie zal in de wayfinding applicatie ervoor zorgen dat de omgeving op een correcte manier wordt herkend, zo kan men een perfect beeld scheppen van welke objecten men afstand moet houden, bijvoorbeeld muren.
 
 \subsubsection{Objectherkenning vs. Objectdetectie}
-In Artificiële intelligentie heeft men twee verschillende manieren om objecten te identificeren, objectherkenning en objectdetectie. Het herkenningsproces is zeer gelijkaardig, maar toch zijn er zekere verschillen bij de uitvoering. Objectdetectie kan men beschouwen als een subset van objectherkenning, men zal de objecten herkennen op een simultane manier, maar bij objectdetectie wordt het object ook gelocaliseerd in de afbeelding. In de onderstaande afbeelding kan men het verschil duidelijk waarnemen, objectherkenning (links) en objectdetectie (rechts). \autocite{ObjRec2020}
+In Artificiële intelligentie heeft men twee verschillende manieren om objecten te identificeren, objectherkenning en objectdetectie. Het herkenningsproces is zeer gelijkaardig, maar toch zijn er zekere verschillen bij de uitvoering. Objectdetectie kan men beschouwen als een subset van objectherkenning, men zal de objecten herkennen op een simultane manier, maar bij objectdetectie wordt het object ook gelokaliseerd in de afbeelding. In de onderstaande afbeelding kan men het verschil duidelijk waarnemen, objectherkenning (links) en objectdetectie (rechts). \autocite{ObjRec2020}
 
 \begin{figure}[H]
 	\centering
@@ -30,7 +30,7 @@ In Artificiële intelligentie heeft men twee verschillende manieren om objecten 
 Om objectherkenning toe te passen kan je gebruik maken van twee verschillende manieren, namelijk 'Machine Learning' en 'Deep learning'. Beide technieken zullen objecten gaan herkennen, maar ze zijn verschillend op vlak van uitvoering.
 
 \subsubsection{Machine learing}
-Machine learning maakt gebruik van classificatie om een bepaald object te herkennen. Ten eerste zal men een trainingset opstellen, dit gebeurt door een verzameling van afbeeldingen samen te stellen en vervolgens de relevante punten aan te duiden. Het is zeer belangrijk om de juiste relevante punten aan te duiden, anders zal het systeem verkeerd getraind worden, waardoor men vervolgens een verkeerde output zal verkrijgen. Deze punten zullen er voor zorgen dat het systeem verschillende categorieën herkent. Vervolgens zal het leermodel deze informatie gebruiken om nieuwe objecten (objecten die nog niet gekend zijn in de trainingset) te analyseren en te classificeren. \autocite{ObjRec2020}
+Machine learning maakt gebruik van classificatie om een bepaald object te herkennen. Ten eerste zal men een trainingset opstellen, dit gebeurt door een verzameling van afbeeldingen samen te stellen en vervolgens de relevante punten aan te duiden. Het is zeer belangrijk om de juiste relevante punten aan te duiden, anders zal het systeem verkeerd getraind worden, waardoor men vervolgens een verkeerde output zal verkrijgen. Deze punten zullen ervoor zorgen dat het systeem verschillende categorieën herkent. Vervolgens zal het leermodel deze informatie gebruiken om nieuwe objecten (objecten die nog niet gekend zijn in de trainingset) te analyseren en te classificeren. \autocite{ObjRec2020}
 
 
 \begin{figure}[H]
@@ -41,7 +41,7 @@ Machine learning maakt gebruik van classificatie om een bepaald object te herken
 
 
 \subsubsection{Deep learning}
-Deep learning maakt gebruik van convulationele neurale netwerken (CNN) om objecten te herkennen. Een CNN kan automatisch de aanhangende kenmerken van een object leren om dat object te identificeren, dit betekent dat een CNN bijvoorbeeld het verschil tussen auto's en vrachtwagens kan herkennen door middel van duizenden afbeeldingen te analyseren en vervolgens te leren welke kenmerken juist verschillend zijn. \autocite{ObjRec2020}
+Deep learning maakt gebruik van convolutionele neurale netwerken (CNN) om objecten te herkennen. Een CNN kan automatisch de aanhangende kenmerken van een object leren om dat object te identificeren, dit betekent dat een CNN bijvoorbeeld het verschil tussen auto's en vrachtwagens kan herkennen door middel van duizenden afbeeldingen te analyseren en vervolgens te leren welke kenmerken juist verschillend zijn. \autocite{ObjRec2020}
 
 \begin{figure}[H]
 	\centering
@@ -60,8 +60,8 @@ Het doel van Augemented reality in deze bachelorproef is om de route op een zo e
 	\caption{Voorbeeld wayfinding applicatie met AR, \autocite{MAXST2019}}
 \end{figure}
 
-\subsection{Werking van Augmented realtiy}
-Augmented reality kan momenteel op drie verschillende manieren worden uitgewerkt, namelijk door middel van SLAM, herkenning gebaseerd en locatie gebaseerd.
+\subsection{Werking van Augmented reality}
+Augmented reality kan momenteel op drie verschillende manieren worden uitgewerkt. Deze verschillende technieken zijn SLAM, herkenning gebaseerd en locatie gebaseerd.
 
 \subsubsection{SLAM (Simultaneous Localization and Mapping)}
 Simultaneous Localization and Mapping of SLAM is de manier die het meest effectief en efficiënt werkt. SLAM lokaliseert sensoren ten opzichte van hun omgeving en brengt tegelijkertijd de omgeving in kaart, het is dus een zeer goede aanpak om complexe AR-simulatieproblemen op te lossen. Het SLAM-systeem is in feite een set van algoritmen die gericht zijn op het oplossen van gelijktijdige lokalisatie en het in kaart brengen van problemen. De meeste Augmented realitykits zijn reeds uitgerust met de mogelijkheid tot een SLAM-aanpak. \autocite{NewGenApps2017}
@@ -76,7 +76,7 @@ De bovenstaande foto toont een praktische uitwerking van SLAM. In de 2 bovenste 
 
 \pagebreak
 \subsubsection{Herkenning gebaseerd}
-Herkenning gebaseerd gebruikt de camera van het gebruikte apparaat om bepaalde visuele markers of objecten te identificeren. Deze AR-technologie is bijgevolg zeer afhankelijk van de kwaliteit van de gebruikte camera, als deze de markers niet goed kan identificeren, dan zal het AR mechanisme niet goed werken. \autocite{NewGenApps2017}
+Herkenning gebaseerd gebruikt de camera van het gebruikte apparaat om bepaalde visuele markers of objecten te identificeren. Deze AR-technologie is bijgevolg zeer afhankelijk van de kwaliteit van de gebruikte camera, als deze de markers niet goed kan identificeren, dan zal het AR-mechanisme niet goed werken. \autocite{NewGenApps2017}
 
 Bij deze manier is het ook mogelijk om de positie en oriëntatie te berekenen. De markers op het scherm worden vervangen door een overeenkomstig 3D-object, dit maakt het mogelijk om het object meer in detail te bekijken door het bijvoorbeeld te roteren zodat men meerdere invalshoeken kan observeren.
 
@@ -84,7 +84,7 @@ Bij deze manier is het ook mogelijk om de positie en oriëntatie te berekenen. D
 Locatie gebaseerd of 'markerless augmented reality' is een AR-technologie die alleen gebruikt maakt van een GPS, digitaal kompas, snelheidsmeter of versnellingsmeter om gegevens over de locatie te verzamelen, de augmented reality visualisaties worden met behulp van deze informatie geactiveerd. Een smartphone heeft genoeg sensoren om deze manier te kunnen realiseren. \autocite{NewGenApps2017}
 
 \subsection{AI + AR}
-De samenhang van Artificiële intelligentie en Augmented reality is zeer cruciaal bij het optimaliseren van een wayfinding applicatie. Ten eerste is het belangrijk dat de objecten op een correcte manier worden herkend. Ten tweede is het zeer belangrijk dat de bevindingen van de objectherkenning op een correcte manier worden vertaald naar de AR omgeving. 
+De samenhang van Artificiële intelligentie en Augmented reality is zeer cruciaal bij het optimaliseren van een wayfinding applicatie. Ten eerste is het belangrijk dat de objecten op een correcte manier worden herkend. Ten tweede is het zeer belangrijk dat de bevindingen van de objectherkenning op een correcte manier worden vertaald naar de AR-omgeving. 
 \newpage
 \section{Verschillende AR en AI frameworks}
 
@@ -92,7 +92,7 @@ De effectieve proof-of-concept zal gemaakt worden in een iOS-applicatie, er werd
 \subsection{AR}
 Welke AR-kit je juist wilt gebruiken ligt vooral aan je eigen persoonlijke eisen, ze hebben namelijk elk hun specifieke kenmerken. Het bepaalde framework moet ook compatibel zijn met de software die je gebruikt om de applicatie te creëren.
 \subsubsection{Unity3D}
-Unity3D is zeer populair voor game development, dit framework biedt de oplossing voor elke soort developer, full-stack noch indie. Met Unity3D is het ook mogelijk om bepaalde scripts in te voegen, dit kan men verstaan als externe voorwerpen zoals stoelen, etc. die men kan toevoegen in de virtuele wereld. Unity is zo uitgebreid dat men zelfs een functionele applicatie kan bouwen zonder één regel code te schrijven. Het bedrijf "In The Pocket" (opdrachtgever van bachelorproef) gebruikt inmiddels ook Unity om hun AR-applicaties te bouwen. Unity is gratis om te gebruiken. \autocite{Arshed2018}
+Unity3D is zeer populair voor game development, dit framework biedt de oplossing voor elke soort developer, full-stack noch indie. Met Unity3D is het ook mogelijk om bepaalde scripts toe te voegen, dit kan men verstaan als externe voorwerpen zoals stoelen, etc. die men kan toevoegen in de virtuele wereld. Unity is zo uitgebreid dat men zelfs een functionele applicatie kan bouwen zonder één regel code te schrijven. Het bedrijf "In The Pocket" (opdrachtgever van bachelorproef) gebruikt inmiddels ook Unity om hun AR-applicaties op te bouwen. Unity is gratis om te gebruiken. \autocite{Arshed2018}
 
 \begin{figure}[H]
 	\centering
@@ -110,7 +110,7 @@ Unreal Engine is zoals Unity3D zeer gekend binnen de game development-wereld. He
 \end{figure}
 
 \subsubsection{iOS ARKit}
-Apple biedt een eigen AR-framework aan zijn developers, namelijk ARKit. Dit framework biedt de mogelijkheid om AR-applicaties te bouwen voor iOS-systemen. Indien u reeds met Swift heeft gewerkt, dan is dit framework de perfecte oplossing om snel en makkelijk een concrete AR-applicatie te maken. Net zoals Unity en Unreal Engine is ARKit ook gratis.
+Apple biedt een eigen AR-framework aan zijn developers, namelijk ARKit. Dit framework biedt de mogelijkheid om AR-applicaties te bouwen voor iOS-apparaten. Indien u reeds met Swift heeft gewerkt, dan is dit framework de perfecte oplossing om snel en makkelijk een concrete AR-applicatie te maken. Net zoals Unity en Unreal Engine is ARKit ook gratis.
 \begin{figure}[H]
 	\centering
 	\includegraphics[scale=0.2]{arkit.png}
@@ -130,7 +130,7 @@ De mogelijk bestaat om andere AR-frameworks zoals Unity, Unreal Engine, etc.  te
 \subsection{AR + AI}
 Het vinden van de perfecte combinatie tussen AR en AI is geen eenvoudige taak en is vaak ook afwisselend van wat het doeleinde is, het artikel van \textcite{Toole2019} (\citetitle{Toole2019}) beschrijft heel duidelijk welke relevante technologiën men kan gebruiken. Er wordt ook besproken hoe geanvanceerd de huidige AI-technieken zijn, deze kunnen namelijk  verticale en horizontale vlakken detecteren, diepte- en segmentbeelden inschatten voor realistische occlusie en zelfs 3D-posities van objecten in real-time afleiden. Deze aspecten zijn van zeker van belang voor de wayfinding-applicatie.
 
-De meeste gebruikelijke manier om deze 2 technieken (AI en AR) te combineren is door afbeeldingen van een scène te nemen, die gegevens door een model te laten lopen en de modeluitgang te gebruiken om effecten binnen de scène te triggeren. De 2 AI-technieken die worden besproken zijn Core ML en Tensorflow Lite.
+De meeste gebruikelijke manier om deze 2 technieken (AI en AR) te combineren is door afbeeldingen van een scène te nemen, die gegevens door een AI-model te laten lopen en de modeluitgang te gebruiken om effecten binnen de scène te triggeren. De 2 AI-technieken die worden besproken zijn Core ML en Tensorflow Lite.
 
 De blogpost van \autocite{Girish2020} (\citetitle{Girish2020}) geeft nog een vierde framework waar men zeker rekening moet mee houden, namelijk 'Vuforia'.
 
@@ -145,7 +145,7 @@ Core ML is een AI-framework dat wordt aangeboden door Apple, dit is vervolgens o
 \end{figure}
 
 \subsubsection{TensorFlow lite}
-TensorFlow is zeer gekend in de AI-wereld, het bedrijf biedt talloze frameworks aan om AI op een eenvoudige manier te integreren in jouw gewenste applicatie. TenserFlow lite werd speciaal gecreëerd om AI te kunnen toepassen met behulp van inputs die worden voorzien door een smartphone, zo is het mogelijk om 'image classfication' en 'object detection' toe te passen, met alleen de input van de smartphonecamera. Dit framework is vervolgens ook gratis. \autocite{TensorFlowLite2020}
+TensorFlow is zeer gekend in de AI-wereld, het bedrijf biedt talloze frameworks aan om AI op een eenvoudige manier te integreren in jouw gewenste applicatie. TenserFlow lite werd speciaal gecreëerd om AI te kunnen toepassen met behulp van inputs die worden voorzien door een smartphone, zo is het mogelijk om 'image classification' en 'object detection' toe te passen, met alleen de input van de smartphonecamera. Dit framework is vervolgens ook gratis. \autocite{TensorFlowLite2020}
 
 \begin{figure}[H]
 	\centering
@@ -183,7 +183,7 @@ Google biedt ook een API die het mogelijk maakt om AI te betrekken bij de AR-app
 		\textbf{Provider}                                                                  & Apple         & TensorFlow                                                                         & Vuforia                                                                                                                     & Google                                                                                \\ \hline
 		\textbf{Prijs}                                                                     & Gratis        & Gratis                                                                             & \begin{tabular}[c]{@{}c@{}}Betalend, men \\ heeft 3 pakketten. \\ Basic, \\ Basic + cloud en\\  Pro (incl. AI)\end{tabular} & \begin{tabular}[c]{@{}c@{}}Gratis tot een\\  bepaald aantal \\ API calls\end{tabular} \\ \hline
 		\textbf{\begin{tabular}[c]{@{}l@{}}Limiet op (API) \\ calls\end{tabular}}          & Ongelimiteerd & Ongelimiteerd                                                                      & \begin{tabular}[c]{@{}c@{}}Ongelimiteerd, \\ indien men \\ een betalend \\ pakket aanschaft\end{tabular}                    & 1000 / maand                                                                          \\ \hline
-		\textbf{\begin{tabular}[c]{@{}l@{}}Compatibel met\\ (AR frameworks):\end{tabular}} & ARKit         & \begin{tabular}[c]{@{}c@{}}Unity3D, Unreal \\ Engine,\\ ARKit, ARCore\end{tabular} & \begin{tabular}[c]{@{}c@{}}Unity3D, maar\\ Vuforia is een\\ AR-SDK op \\ zichzelf\end{tabular}                              & \begin{tabular}[c]{@{}c@{}}Unity3D, Unreal \\ Engine,\\ ARKit, ARCore\end{tabular}    \\ \hline
+		\textbf{\begin{tabular}[c]{@{}l@{}}Compatibel met\\ (AR frameworks):\end{tabular}} & ARKit, Unity3D        & \begin{tabular}[c]{@{}c@{}}Unity3D, Unreal \\ Engine,\\ ARKit, ARCore\end{tabular} & \begin{tabular}[c]{@{}c@{}}Unity3D, maar\\ Vuforia is een\\ AR-SDK op \\ zichzelf\end{tabular}                              & \begin{tabular}[c]{@{}c@{}}Unity3D, Unreal \\ Engine,\\ ARKit, ARCore\end{tabular}    \\ \hline
 		\textbf{Documentatie}                                                              & Ja            & Ja                                                                                 & Ja                                                                                                                          & Ja                                                                                    \\ \hline
 	\end{tabular}
 	\caption{Vergelijking AR + AI frameworks}
@@ -193,18 +193,18 @@ Google biedt ook een API die het mogelijk maakt om AI te betrekken bij de AR-app
 
 In deze sectie zal men meer focussen op het onderzoek en de uitwerkingen die reeds werden gerealiseerd. Men zal deze algemene kennis kunnen gebruiken om mijn onderzoek te ondersteunen. Deze literatuurstudie staat ook in thema met de wayfinding-context, op deze manier is de verkregen informatie relevanter.
 
-In het algemeen kan ik op voorhand al besluiten dat er reeds weinig onderzoek is gedaan naar de samenhang van 'Artificiële intelligentie' en 'Augemented reality' binnen de wayfinding-context. De termen AI en AR zijn afzondelijk van elkaar zeer gekend in de IT-wereld, men kan dit zelfs niet meer uit het straatbeeld wegdenken. Door de grote belangstelling voor AI en AR, en de minieme huidige onderzoekstoestand binnen de wayfinding-context wordt deze bachelorproef alleen maar interessanter.
+In het algemeen kan ik op voorhand al besluiten dat er reeds weinig onderzoek is gedaan naar de samenhang van 'Artificiële intelligentie' en 'Augemented reality' binnen de wayfinding-context. De termen AI en AR zijn afzondelijk van elkaar zeer gekend in de IT-wereld, men kan dit zelfs niet meer uit het straatbeeld weg denken. Door de grote belangstelling voor AI en AR, en de minieme huidige onderzoekstoestand binnen de wayfinding-context wordt deze bachelorproef alleen maar interessanter.
 
 \subsection{Artificiële intelligentie (AI)}
 
 \subsubsection{Objectherkenning}
 In het uitgave van ~\textcite{Liang2015}, (\citetitle{Liang2015}) werd er onderzoek gedaan naar het gebruik van objectherkenning door middel van 'Convolutionele netwerken' of met andere woorden, 'Deep learning'. De auteurs werden geïnspireerd door 'Deep learning' omdat het reeds meerdere successen had geboekt bij andere computervisietaken. Omdat objectherkenning een zeer belangrijk factor is voor veel complexe systemen, wouden ze dit efficiënter maken en dus ook verbeteren, en dit door gebruik te maken van een geanvanceerde techniek, namelijk de convolutionele netwerken. 
 
-Tijdens hun onderzoek werd het netwerk getest door middel van meerdere datasets, namelijk CIFAR-10, CIFAR-100, MNIST en SVHN. Deze datasets zijn zeer handig wanneer men convolutionele netwerken wilt testen, men hoeft dus geen data meer te verzamelen om te kunnen observeren of een netwerk wel degelijk goed functioneert. Het vinden van goede datasets is een cruciale factor bij het gebruik van AI, indien deze niet voldoen aan de eisen kan men ook geen bruikbare conclusies opstellen.
+Tijdens hun onderzoek werd het netwerk getest door middel van meerdere datasets, namelijk CIFAR-10, CIFAR-100, MNIST en SVHN. Deze datasets zijn zeer handig wanneer men convolutionele netwerken wil testen, men hoeft dus geen data meer te verzamelen om te kunnen observeren of een netwerk wel degelijk goed functioneert. Het vinden van goede datasets is een cruciale factor bij het gebruik van AI, indien deze niet voldoen aan de eisen kan men ook geen bruikbare conclusies opstellen.
 
-In het onderzoek verduidelijkt men ook nog eens het gebruik van 'Deep learning' zorgt voor betere resultaten. Het verhogen van de parameters in een CNN zorgde in het onderzoek voor nog een betere performantie, in tegenstelling met de 'gewone' feed-forward structuur. 
+In het onderzoek verduidelijkt men ook nog eens dat het gebruik van 'Deep learning' zorgt voor betere resultaten. Het verhogen van de parameters in een CNN zorgde in het onderzoek voor nog een betere performantie, in tegenstelling met de 'gewone' feed-forward structuur. 
 
-Uit de conclusie van hun onderzoek kan men besluiten dat een RCNN (recurrent convolutioneel netwerk) betere resultaten opleverd. Een recurrent convolutioneel netwerk is uitgebreider CNN, men gaat meer recurrente verbindingen (of parameters) toevoegen in elke laag. Deze structuur maakte het mogelijk om meer diepgang te creëren, men ging met andere woorden meer informatie verkrijgen uit elke laag, waardoor men meer kans kreeg op het juist eindresultaat. In de laatste fase van het onderzoek kon men andermaal besluiten dat het netwerk nog efficiënter werkte, bij het toevoegen van (nog) meer parameters.
+Uit de conclusie van hun onderzoek kan men besluiten dat een RCNN (recurrent convolutioneel netwerk) betere resultaten oplevert. Een recurrent convolutioneel netwerk is uitgebreider CNN, men gaat meer recurrente verbindingen (of parameters) toevoegen in elke laag. Deze structuur maakte het mogelijk om meer diepgang te creëren, men ging met andere woorden meer informatie verkrijgen uit elke laag, waardoor men meer kans kreeg op het juist eindresultaat. In de laatste fase van het onderzoek kon men andermaal besluiten dat het netwerk nog efficiënter werkte door de toevoeging van (nog) meer parameters.
 
 \begin{figure}[H]
 	\centering
@@ -212,14 +212,14 @@ Uit de conclusie van hun onderzoek kan men besluiten dat een RCNN (recurrent con
 	\caption{Verschil tussen CNN en RCNN, \autocite{Liang2015}}
 \end{figure}
 
-Objectherkenning kan ook rechtstreeks gebruikt worden om de juiste weg te berekenen, dit wordt aangetoond in de studie van \textcite{Haikun2017} (\citetitle{Haikun2017}). In deze paper werd een wayfinding-ontwerp voor een virtuele wereld geoptimaliseerd. Vroeger werd een wayfinding-ontwerp handmatig opgesteld, hierbij moest men rekening houden met talloze verschillende parameters die mogelijks kunnen veranderen. Zo is het mogelijk dat de menselijke factoren als omgevingsfactoren  kunnen veranderen, een statisch ontwerp creëren die steeds voldoet aan relevante eisen is dus niet haalbaar.
+Objectherkenning kan ook rechtstreeks gebruikt worden om de juiste weg te berekenen, dit wordt aangetoond in de studie van \textcite{Haikun2017} (\citetitle{Haikun2017}). In deze paper werd een wayfinding-ontwerp voor een virtuele wereld geoptimaliseerd. Vroeger werd een wayfinding-ontwerp handmatig opgesteld, hierbij moest men rekening houden met talloze verschillende parameters die mogelijks kunnen veranderen. Zo is het mogelijk dat de menselijke factoren als omgevingsfactoren  kunnen veranderen. Een statisch ontwerp creëren die steeds voldoet aan relevante eisen is dus niet haalbaar.
 
-Om dit probleem op te lossen werd 'Way to Go!' gecreërd, dit is een systeem dat automatisch een dynamisch wayfinding-ontwerp kan genereren voor verschillende navigatiemogelijkheden. Het systeem werkt als volgt. Ten eerste moet men een navigatiescenario specifiëren, met moet met andere woorden een route uitstippelen. Ten tweede zal het systeem automatisch een geoptimaliseerd wayfinding-ontwerp creëren met borden die op de juiste manier zijn geplaatst, rekening houdend met de zichtbaarheid van menselijke agenten en de mogelijkheid om fouten te maken tijdens een navigatie.  In het onderzoek evalueert men de resultaten door verschillende wayfinding-ontwerpen te vergelijken en laten zien dat het geoptimaliseerde wayfinding-ontwerp voetgangers effectief en efficiënt naar hun bestemming kan leiden. De aanpak kan de ontwerper van het ontwerp ook helpen om de bereikbaarheid van een bestemming vanaf verschillende locaties te visualiseren en eventuele "blinde" zones te corrigeren met extra bewegwijzering.
+Om dit probleem op te lossen werd 'Way to Go!' gecreërd, dit is een systeem dat automatisch een dynamisch wayfinding-ontwerp kan genereren voor verschillende navigatiemogelijkheden. Het systeem werkt als volgt. Ten eerste moet men een navigatiescenario specifiëren, met moet met andere woorden een route uitstippelen. Ten tweede zal het systeem automatisch een geoptimaliseerd wayfinding-ontwerp creëren met borden die op de juiste manier zijn geplaatst, rekening houdend met de zichtbaarheid van menselijke agenten en de mogelijkheid om fouten te maken tijdens een navigatie.  In het onderzoek evalueert men de resultaten door verschillende wayfinding-ontwerpen te vergelijken. Men laat vervolgens ook zien dat het geoptimaliseerde wayfinding-ontwerp voetgangers effectief en efficiënt naar hun bestemming kan leiden. De aanpak kan de ontwerper ook helpen om de bereikbaarheid van een bestemming vanaf verschillende locaties te visualiseren en eventuele 'blinde' zones te corrigeren met extra bewegwijzering.
 
 \subsubsection{Postionering}
-Positionering binnenin gebouwen is zeer belangrijk in de wayfinding-context, als men niet goed kan bepalen waar de gebruiker zich bevindt, dan is het zeker niet mogelijk om de gepaste route aan te tonen. Het onderzoek van \textcite{Hasan2019} (\citetitle{Hasan2019}) biedt hier een mogelijke oplossing voor, zij hebben verschillende 'draadloze' technieken onderzocht die de locatie binnenshuis kunnen bepalen. De traditionele GPS (Global positioning system) is wel gekend om de locatie buitenshuis te bepalen, maar deze voldoet meestal niet aan de benodigdheden voor binnenhuispositionering. De huidige techologie die hiervoor gekend staat is Wi-Fi positionering.
+Positionering binnenin gebouwen is zeer belangrijk in de wayfinding-context, als men niet goed kan bepalen waar de gebruiker zich bevindt, dan is het zeker niet mogelijk om de gepaste route aan te tonen. Het onderzoek van \textcite{Hasan2019} (\citetitle{Hasan2019}) biedt hier een mogelijke oplossing voor, zij hebben verschillende 'draadloze' technieken onderzocht die de locatie binnenshuis kunnen bepalen. De traditionele GPS (Global positioning system) is wel gekend om de locatie buitenshuis te bepalen, maar deze voldoet meestal niet aan de benodigdheden voor binnenhuispositionering. De huidige technologie die hiervoor gekend staat is Wi-Fi positionering.
 
-In deze paper beschrijft men hoe men de 'indoor' positie kan bepalen door middel van Wi-Fi, Bluetooth, Radio-frequency Idenfication Service (RFID). Deze heeft men ook uitwerkt voor verschillende doelapplicaties die steeds gekoppeld zijn aan een bepaalde sector, bv. marketing and customer assistance, health sector, security, ...
+In deze paper beschrijft men hoe men de 'indoor' positie kan bepalen door middel van Wi-Fi, Bluetooth en Radio-frequency Idenfication Service (RFID). Deze heeft men ook uitgewerkt voor verschillende doelapplicaties die steeds gekoppeld zijn aan een bepaalde sector, bv. marketing and customer assistance, health sector, security, ...
 
 Uit hun conclusie kan men besluiten dat de nauwkeurigheid van de plaatsbepaling deels afhangt van de dichtheid van de toegangspunten en de standaardisatiepunten. Deze informatie kan van pas komen in typische openbare gebouwen zoals winkelcentra, universiteiten en luchthavens. In hun onderzoek werden ze ook geconfronteerd met bepaalde uitdagingen. Zo constateerden zij dat de resolutie van de plaatsbepaling drastisch verslechtert wanneer men gebruik maakt van een non-LOS multipath, in het onderzoek werden vervolgens enkele oplossingen voorgesteld die kunnen helpen bij de aanpak van deze uitdaging.
  
@@ -227,24 +227,24 @@ Uit hun conclusie kan men besluiten dat de nauwkeurigheid van de plaatsbepaling 
 \subsection{Augmented reality (AR)}
 
 \subsubsection{Simultaneous Localization and Mapping (SLAM)}
-Het onderzoek van \textcite{Zhang2017} (\citetitle{Zhang2017}) heeft als hoofddoel om het leven voor slechtzienden makkelijk te maken. Men wenst dit doel te bereiken met behulp van een indoor wayfinding applicatie te creëren die deze bepaald groep mensen zal begeleiden bij het vinden van de weg, specifiek in gebouwen. Dit onderzoek is zeer vergelijkbaar met deze bachelorproef, het eindproduct kent bijna een grote gelijkenis, alleen wordt er in deze paper gebruik gemaakt van audio-ondersteuning. Men is er dan ook van overtuigt dat deze publicatie zal helpen bij het vinden van het gepaste eindresultaat.
+Het onderzoek van \textcite{Zhang2017} (\citetitle{Zhang2017}) heeft als hoofddoel om het leven voor slechtzienden makkelijker te maken. Men wenst dit doel te bereiken door een indoor wayfinding applicatie te creëren die deze bepaalde groep mensen zal begeleiden bij het vinden van de weg, specifiek in gebouwen. Dit onderzoek is zeer vergelijkbaar met deze bachelorproef, het eindproduct kent namelijk een grote gelijkenis, alleen wordt er in deze paper gebruik gemaakt van audio-ondersteuning. Men is er dan ook van overtuigt dat deze publicatie zal helpen bij het vinden van het gepaste eindresultaat.
 
 In dit onderzoek probeert men huidige SLAM-technieken te verbeteren, volgens de state-of-the-art werden er steeds fouten bevonden bij het bepalen van de correcte positie, de zogekende 6-DOF-fout. De gekende aanpassingen die werden toegepast tijdens het onderzoek verbeterden niet alleen de 6-DOF-fout, maar ook de rekentijd. Dit resulteert in een snellere response naar de eindgebruiker, wat alleen maar een positieve invloed heeft op de gebruiksvriendelijkheid. In het onderzoek werden ook experimenten uitgevoerd, deze toonden daadwerkelijk aan dat de effectiviteit van het navigeren wel degelijk werd verbeterd voor slechtziende mensen.
 
 \subsection{Artificiële intelligentie (AI) + Augmented reality (AR)}
-\subsubsection{Pouria 2016}
-Die paper van \textcite{Pouria2016} (\citetitle{Pouria2016}) zal zeer veel hulp bieden, het eindresultaat van dit onderzoek kent namelijk een zeer grote overeenkomst met de objectieven van deze bachelorproef. Dit onderzoek gebruikt evenals hetzelfde soort toestel om te communiceren met de gebruiker.
+\subsubsection{Uitgewerkte wayfinding applicatie}
+De paper van \textcite{Pouria2016} (\citetitle{Pouria2016}) zal zeer veel hulp bieden, het eindresultaat van dit onderzoek kent namelijk een zeer grote overeenkomst met de objectieven van deze bachelorproef. Dit onderzoek gebruikt evenals hetzelfde soort toestel om te communiceren met de gebruiker.
 
 In de uitwerking hield men rekening met de sensoren die men kan vinden in mobiele toestellen, hiermee ging men ook aan de slag. Deze sensoren hebben het mogelijk gemaakt om de locatie, koers en oriëntatie van de gebruiker te detecteren en om contextuele informatie uit verschillende bronnen van online gegevens te verkrijgen. Het combineren van de verkregen data van positionerings- en oriëntatiesensoren met camera's heeft het ook mogelijk gemaakt om praktische Augmented Reality (AR)-toepassingen op deze mobiele apparaten in te zetten. 
 
-Voor de uitwerking van de paper werd een systeem gecreëerd dat een beeld geeft over de navigatiebeleving, dit werd gerealiseerd door middel van Augmented reality en continue feedback van de gebruiker ten opzichte van de dichtsbijzijnde oriëntatiepunten. Deze oriëntatiepunten zijn nodig voor de navigatie en om het juiste pad te vinden. De exacte positie werd bepaald door middel van GPS-sensoren, deze zijn reeds aanwezig in mobiele apparaten. Bovenop de GPS-data werd ook gebruik gemaakt van een beeldverwerkingsalgoritme die de juiste afstand berekent tot een oriëntatiepunt.Om de effectiviteit van het padvinden te verbeteren werd een machinaal leeralgoritme toegevoegd. Dit algoritme zal er voor zorgen dat men voor elke gebruiker een bewegingsprofiel kan opstellen, dit profiel zal er voor zorgen dat men steeds aanpassingen kan uitvoeren op de navigatie-instructies.
+Voor de uitwerking van de paper werd een systeem gecreëerd dat een beeld geeft over de navigatiebeleving, dit werd gerealiseerd door middel van Augmented reality en continue feedback van de gebruiker ten opzichte van de dichtsbijzijnde oriëntatiepunten. Deze oriëntatiepunten zijn nodig voor de navigatie en om het juiste pad te vinden. De exacte positie werd bepaald door middel van GPS-sensoren, deze zijn reeds aanwezig in mobiele apparaten. Bovenop de GPS-data werd ook gebruik gemaakt van een beeldverwerkingsalgoritme die de juiste afstand berekent tot een oriëntatiepunt. Om de effectiviteit van het padvinden te verbeteren werd een machinaal leeralgoritme toegevoegd. Dit algoritme zal ervoor zorgen dat men voor elke gebruiker een bewegingsprofiel kan opstellen, dit profiel zal ervoor zorgen dat men steeds aanpassingen kan uitvoeren op de navigatie-instructies.
 
 Uit de experimenten werd gebleken dat het gebruikte algoritme veel betere resultaten leverde als een 'normaal' turn-by-turn systeem, deze technologie wordt gebruikt bij de huidige GPS-toestellen.
 
 \subsubsection{Dent Reality}
-Dent Reality is een start-up die gevestigd is in Londen, ze specialiseren zich in het maken van Indoor AR navigatiesystemen voor winkelcentrums en andere grote ruimtes. Het product dat ze leveren is identiek het doeleinde van deze bachelorproef. De wayfinding-applicatie maakt ook gebruik van machine learning om de locatie en navigatie te optimaliseren.
+Dent Reality is een start-up die gevestigd is in Londen, ze specialiseren zich in het maken van Indoor AR-navigatiesystemen voor winkelcentrums en andere grote ruimtes. Het product dat ze leveren is identiek het doeleinde van deze bachelorproef. De wayfinding-applicatie maakt ook gebruik van machine learning om de locatie en navigatie te optimaliseren.
 
-In het artikel van \textcite{Hart2019} (\citetitle{Hart2019}) word besproken hoe men de applicatie tot stand heeft gebracht, inclusief motivatie. Men kan opmerken dat vele challenges die worden besproken in het artikel terug komen in de voorgaande elementen van deze literatuurstudie. Men is er dan ook van overtuigt dat de uitwerking van Dent Reality een belangrijke bron van informatie zal zijn in het komende onderzoek.
+In het artikel van \textcite{Hart2019} (\citetitle{Hart2019}) wordt besproken hoe men de applicatie tot stand heeft gebracht, inclusief motivatie. Men kan besluiten dat vele challenges die worden besproken in het artikel terugkomen in de voorgaande elementen van deze literatuurstudie. Men is er dan ook van overtuigt dat de uitwerking van Dent Reality een belangrijke bron van informatie zal zijn in het komende onderzoek.
 
 \begin{figure}[H]
 	\centering
