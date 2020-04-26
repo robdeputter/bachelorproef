@@ -235,7 +235,7 @@ De resultaten van de eerste objectdetecttest zijn opmerkelijk, er is namelijk ee
 
 \begin{figure}[H]
 	\centering
-	\includegraphics[scale=0.35]{Boxplots_Boek.png}
+	\includegraphics[scale=0.38]{Boxplots_Boek.png}
 	\caption{Boxplots test boek}
 \end{figure}
 \subsection{Test met persoon}
@@ -243,34 +243,97 @@ De resultaten van de eerste objectdetecttest zijn opmerkelijk, er is namelijk ee
 De tweede test bracht eveneens zeer opmerkelijke resultaten, in de onderstaande boxplot kan men opmerken dat het CoreML-framework in bijna alle gevallen de persoon in kwestie met 100 \% zekerheid kon aanduiden. Het framework dat door TensorFlow wordt aangeboden scoort hier ook goed met een gemiddelde van 80 \% (standaardafwijking: 2.51). CoreML haalde in deze test een gemiddelde van 99.78 \% (standaardafwijking: 0.42), de lage waarde voor de standaardafwijking vertaalt zich in een zeer goede consistentie.
 \begin{figure}[H]
 	\centering
-	\includegraphics[scale=0.35]{Boxplots_Persoon.png}
+	\includegraphics[scale=0.4]{Boxplots_Persoon.png}
 	\caption{Boxplots test persoon}
 \end{figure}
+
 \subsection{Test met fles}
+De derde zorgde voor gelijkaardige resultaten als de vorige tests. Opnieuw presteerde het CoreML-framework veel beter als TensorFlow Lite. Het framework van apple haalde een gemiddelde van 91.55 \% (standaardafwijking: 4.52), voor TensorFlow Lite bedraagde dit 58.89 \% (standaardafwijking: 3.65). Men kan andermaal concluderen dat beide frameworks consistente resultaten behaalden, dit is ook visueel zienbaar in de onderstaande boxplots. 
 \begin{figure}[H]
 	\centering
-	\includegraphics[scale=0.35]{Boxplots_Fles.png}
+	\includegraphics[scale=0.45]{Boxplots_Fles.png}
 	\caption{Boxplots test fles}
 \end{figure}
 \subsection{Test met horloge}
+De resultaten uit het vierde experiment zijn zeer interessant, opnieuw scoort het CoreML-framework betere resultaten dan TensorFlow Lite. CoreML haalde een gemiddelde van 78.55 \% (standaardafwijking: 13.38), TensorFlow lite behaalde 66.38 \% (standaardafwijking: 4.39). Op het eerste zicht lijkt CoreML de 'winnaar' in dit experiment, alsnog moet men dit in betwijfeling trekken. De consistentie van CoreML in dit experiment is zeer slecht, de resultaten fluctueren namelijk tussen de  56 en 95 \%. De hoge standaardafwijking is vervolgens ook visueel aantoonbaar op de onderstaande boxplot.
 \begin{figure}[H]
 	\centering
-	\includegraphics[scale=0.35]{Boxplots_Horloge.png}
+	\includegraphics[scale=0.4]{Boxplots_Horloge.png}
 	\caption{Boxplots test horloge}
+\end{figure}
+\subsection{Evaluatie}
+In het algemeen kan men besluiten dat het CoreML-framework de beste  resultaten levert op vlak van objectdetectie. Men kan wel concluderen dat de hoge gemiddeldes vaak gepaard gaan met hoge standaardafwijkingen, dit betekent dat de consistentie lager is. In de onderstaande grafiek kan men telkens opnieuw zien dat CoreML ruim beter presteert. Zoals men eerder al heeft vermeld geeft deze AI-eigenschap een beter zicht over de nauwkeurig -en correctheid van het gebruikte algoritme.
+\begin{figure}[H]
+	\centering
+	\includegraphics[scale=0.45]{Gemiddelde_objectdetectie.png}
+	\caption{Gemiddelden objectdetectie}
 \end{figure}
 
 \section{Segmentatie}
-
 \subsection{Menssegmentatie}
-
+\begin{table}[H]
+	\centering
+	\begin{tabular}{|c|c|c|}
+		\hline
+		& \textbf{TensorFlow Lite} & \textbf{CoreML} \\ \hline
+		\textbf{Aantal punten} & 3                        & 26              \\ \hline
+	\end{tabular}
+	\caption{Resultaten menssegmentatie test}
+\end{table}
 \subsection{Luchtsegmentatie}
 
+
+\begin{table}[H]
+	\centering
+	\begin{tabular}{|c|c|c|}
+		\hline
+		& \textbf{TensorFlow Lite} & \textbf{CoreML} \\ \hline
+		\textbf{Aantal punten} & 7                        & 22              \\ \hline
+	\end{tabular}
+	\caption{Resultaten luchtsegmentatie test}
+\end{table}
 \subsection{Segmentatie binnen gebouwen}
 
 \subsubsection{Korte gang}
+\begin{table}[H]
+	\centering
+	\begin{tabular}{|c|c|c|}
+		\hline
+		& \textbf{TensorFlow Lite} & \textbf{CoreML} \\ \hline
+		\textbf{Aantal punten} & 3                        & 26              \\ \hline
+	\end{tabular}
+	\caption{Resultaten segmentatie binnen gebouwen: korte gang}
+\end{table}
 
 \subsubsection{Lange gang}
+\begin{table}[H]
+	\centering
+	\begin{tabular}{|c|c|c|}
+		\hline
+		& \textbf{TensorFlow Lite} & \textbf{CoreML} \\ \hline
+		\textbf{Aantal punten} & 9                        & 20              \\ \hline
+	\end{tabular}
+	\caption{Resultaten segmentatie binnen gebouwen: lange gang}
+\end{table}
 
 \subsubsection{Keuken}
+
+\begin{table}[H]
+	\centering
+	\begin{tabular}{|c|c|c|}
+		\hline
+		& \textbf{TensorFlow Lite} & \textbf{CoreML} \\ \hline
+		\textbf{Aantal punten} & 0                        & 29              \\ \hline
+	\end{tabular}
+	\caption{Resultaten segmentatie binnen gebouwen: keuken}
+\end{table}
+
+\subsection{Evaluatie}
+\begin{figure}[H]
+	\centering
+	\includegraphics[scale=0.45]{Segmentatie_grafiek.png}
+	\caption{Aantal punten per segmentatietest}
+\end{figure}
+
 
 
