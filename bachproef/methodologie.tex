@@ -334,11 +334,15 @@ De resultaten van de test in de lange gang zijn ook zeer boeiend, deze test zou 
 In de laatste test kon men opnieuw een gelijkaardig resultaat opmerken. Het TensorFlow Lite slaagt in deze test er helemaal niet in om de grond te detecteren, een weerspiegeling in het grondoppervlak zorgde voor storing. De frameworks moeten in verschillende situaties op dezelfde manier werken, de slechte resultaten zorgden dus zeker voor een 'afstraffing'. Het CoreML-framework slaagde zeker in zijn opzet, het kon de muren bijna perfect detecteren, alsook de grond werd op een goede manier  herkent en gedetecteerd.
 
 \subsection{Evaluatie}
+In het algemeen kan men concluderen dat CoreML een veel betere resultaat levert als TensorFlow Lite op vlak van segmentatie. Over de verschillende testen heen kan men telkens zien dat CoreML de hogere punten haalt, het maakte veel minder fouten in het segmenteren van de verschillende objecten, dit kan men visueel ook zien in de onderstaande grafiek. Het TensorFlow Lite-framework is niet nauwkeurig genoeg en vervolgens ook niet bestemd om de omgeving op een optimale manier in kaart te brengen.
 \begin{figure}[H]
 	\centering
 	\includegraphics[scale=0.45]{Segmentatie_grafiek.png}
 	\caption{Aantal punten per segmentatietest}
 \end{figure}
 
+\section{Algemene evaluatie}
+Als men alle resultaten naast elkaar plaatst, dan kan men een significant verschil opmerken tussen de twee frameworks. In geen enkele test scoorde TensorFlow Lite beter als CoreML, hieruit kan men besluiten dat CoreML nauwkeuriger, consistener en betrouwbaarder is om te gebruiken als framework voor een wayfinding applicatie. 
 
+In de wayfinding context is het namelijk zeer belangrijk dat men in verschillende situaties een goed zicht of plan van de kamer kan opstellen, dit aspect wordt reeds gedaan door het SLAM-aspect binnen het AR-mechanisme, maar hierin worden nog steeds fouten geconstateerd, om dit te optimaliseren zal men gebruik maken van CoreML.
 
