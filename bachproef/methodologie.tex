@@ -320,8 +320,8 @@ Zoals men eerder had beschreven werd de segmentatie binnen gebouwen op drie vers
 	\caption{Resultaten segmentatie binnen gebouwen: lange gang}
 \end{table}
 De resultaten van de test in de lange gang zijn ook zeer boeiend, deze test zou beproeven of de frameworks ook het grond -en muuroppervlak zouden detecteren over een langere afstand. Uit de resultaten kan men besluiten dat TensorFlow Lite opnieuw slechter presteert, maar in vergelijking met de vorige test kent men wel een groei. Opnieuw slaagt CoreML beter in zijn opzet, men kon wel een daling zien op vlak van prestaties tegenover de vorige test (in de korte gang).
-\subsubsection{Keuken}
 
+\subsubsection{Keuken}
 \begin{table}[H]
 	\centering
 	\begin{tabular}{|c|c|c|}
@@ -331,6 +331,7 @@ De resultaten van de test in de lange gang zijn ook zeer boeiend, deze test zou 
 	\end{tabular}
 	\caption{Resultaten segmentatie binnen gebouwen: keuken}
 \end{table}
+In de laatste test kon men opnieuw een gelijkaardig resultaat opmerken. Het TensorFlow Lite slaagt in deze test er helemaal niet in om de grond te detecteren, een weerspiegeling in het grondoppervlak zorgde voor storing. De frameworks moeten in verschillende situaties op dezelfde manier werken, de slechte resultaten zorgden dus zeker voor een 'afstraffing'. Het CoreML-framework slaagde zeker in zijn opzet, het kon de muren bijna perfect detecteren, alsook de grond werd op een goede manier  herkent en gedetecteerd.
 
 \subsection{Evaluatie}
 \begin{figure}[H]
