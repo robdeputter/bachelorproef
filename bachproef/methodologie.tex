@@ -280,9 +280,10 @@ In het algemeen kan men besluiten dat het CoreML-framework de beste  resultaten 
 	\end{tabular}
 	\caption{Resultaten menssegmentatie test}
 \end{table}
+
+De resultaten uit de eerste segmentatietest zijn merkwaardig, CoreML haalt in deze test opnieuw de betere uitkomst. Het framework van Apple wist in 26 van de 29 een betere segmentatie uit zijn mouw te schudden. Het TensorFlow Lite-framework werkte niet nauwkeurig en gaf zeer vaak een compleet verkeerde output, CoreML slaagde er in om bijna elke test met minimale fouten af te werken.
+
 \subsection{Luchtsegmentatie}
-
-
 \begin{table}[H]
 	\centering
 	\begin{tabular}{|c|c|c|}
@@ -292,6 +293,8 @@ In het algemeen kan men besluiten dat het CoreML-framework de beste  resultaten 
 	\end{tabular}
 	\caption{Resultaten luchtsegmentatie test}
 \end{table}
+
+De tweede test werd op een simultane wijze uitgevoerd als de eerste, ook in deze test kan men zien dat CoreML betere prestaties levert. Men kan wel concluderen dat TensorFlow Lite een betere resultaat haalt als bij menssegmentatie. Alsnog kon men te veel fouten bespeuren in de resultaten van TensorFlow Lite. Bovendien was het CoreML-framework ook in staat om andere objecten binnen de afbeelding te segmenteren, ookal werden beide frameworks op dezelfde manier getrained.
 \subsection{Segmentatie binnen gebouwen}
 
 \subsubsection{Korte gang}
@@ -304,6 +307,7 @@ In het algemeen kan men besluiten dat het CoreML-framework de beste  resultaten 
 	\end{tabular}
 	\caption{Resultaten segmentatie binnen gebouwen: korte gang}
 \end{table}
+Zoals men eerder had beschreven werd de segmentatie binnen gebouwen op drie verschillende plaatsen getest. De resultaten van de eerste test zijn opnieuw zeer interessant. Opnieuw kan men significant verschil opmerken, het CoreML-framework slaagt er terug in om de beste resultaten te behalen. Ook tijdens het uitvoeren van de test kon men opmerken dat TensorFlow Lite een grondoppervlakt detecteerde die er in de werkelijkheid niet was, deze fouten zorgde voornamelijk voor het grote puntenverschil.
 
 \subsubsection{Lange gang}
 \begin{table}[H]
@@ -315,7 +319,7 @@ In het algemeen kan men besluiten dat het CoreML-framework de beste  resultaten 
 	\end{tabular}
 	\caption{Resultaten segmentatie binnen gebouwen: lange gang}
 \end{table}
-
+De resultaten van de test in de lange gang zijn ook zeer boeiend, deze test zou beproeven of de frameworks ook het grond -en muuroppervlak zouden detecteren over een langere afstand. Uit de resultaten kan men besluiten dat TensorFlow Lite opnieuw slechter presteert, maar in vergelijking met de vorige test kent men wel een groei. Opnieuw slaagt CoreML beter in zijn opzet, men kon wel een daling zien op vlak van prestaties tegenover de vorige test (in de korte gang).
 \subsubsection{Keuken}
 
 \begin{table}[H]
