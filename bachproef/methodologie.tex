@@ -22,7 +22,6 @@ Bij het zoeken van de verschillende frameworks werd er rekening gehouden met bep
 \begin{itemize}
 	\item De kost van het framework (betalend of gratis)
 	\item Een mogelijke limiet op het aantal 'calls'
-	\item De compatibiliteit met ARKit
 	\item Documentatie
 	\item Reeds uitgewerkte voorbeelden
 \end{itemize}
@@ -40,14 +39,14 @@ De twee andere frameworks die ook werden besproken in de stand van zaken werden 
 Om het juiste AI-framework te kiezen werd elk van hen op een grondige manier geëvalueerd. Om dit op een optimale manier te doen werd er rekening gehouden met verschillende beoordelingstechnieken.
 
 \subsubsection{Functionaliteit}
-De eerste factor waar rekening mee werd gehouden is het feit of het AI-framework wel degenlijk deed wat er gevraagd. Om de frameworks op een zo divers mogelijke manier te kunnen testen werden verschillende soorten AI-eigenschappen getest:
+De eerste factor waar rekening mee werd gehouden is het feit of het AI-framework wel degelijk deed wat er werd gevraagd. Om de frameworks op een zo divers mogelijke manier te kunnen testen werden verschillende soorten AI-eigenschappen getest:
 \begin{itemize}
 	\item Objectdetectie
 	\item Menssegmentatie
 	\item Luchtsegmentatie 
 	\item Segmentatie binnen gebouwen
 \end{itemize}
-Segmentatie is het opsplitsen van een bepaald beeld in verschillende segmenten. Op deze manier zou het AI-framework bijvoorbeeld muren en grond van elkaar kunnen onderscheiden. De combinatie van objectdetectie en segmentatie is van zeer groot belang binnen deze bachelorproef, zo is het mogelijk om vervolgens de verschillende soorten objecten van elkaar te onderscheiden en bepalen waar die zich juist bevinden. Deze uitvoering werd reeds uitgewerkt door 'Gestalt Robotics', een robot zal door deze implementatie op een correctie manier door het fabrieksgebouw bewegen.
+Segmentatie is het opsplitsen van een bepaald beeld in verschillende segmenten. Op deze manier zou het AI-framework bijvoorbeeld muren en grond van elkaar kunnen onderscheiden. De combinatie van objectdetectie en segmentatie is van zeer groot belang binnen deze bachelorproef, zo is het mogelijk om vervolgens de verschillende soorten objecten van elkaar te onderscheiden en te bepalen waar die zich juist bevinden. Deze uitvoering werd reeds uitgewerkt door 'Gestalt Robotics', een robot zal door deze implementatie op een correcte manier door het fabrieksgebouw bewegen.
 
 \begin{figure}[H]
 	\centering
@@ -59,13 +58,13 @@ Segmentatie is het opsplitsen van een bepaald beeld in verschillende segmenten. 
 De tweede en meest cruciale factor is de correctheid van het AI-framework voor de verschillende soorten AI-eigenschappen. Het is belangrijk dat het framework betrouwbaar is en dus geen foute oplossing zal teruggeven, anders zal dit verkeerd doorgegeven worden aan de visuele kant van de applicatie en zal de route verkeerd worden aangegeven. Om de correctheid van elk AI-framework te testen werden opnieuw de diverse AI-eigenschappen onder de loep genomen.
 
 \subsubsection{Correctheid - 1.  Objectdetectie}
-Om de objectdetectie te evalueren werd geobserveerd of het framework de juiste positie van het gerelateerde object aangeeft , alsook het percentage dat de correctie voorstelt werd in acht gehouden. Dit proces werd 29 keer herhaald, de resultaten werden gebundeld en geëvalueerd. 
+Om de objectdetectie te evalueren werd geobserveerd of het framework de juiste positie van het gerelateerde object aangeeft, alsook het percentage dat de correctie voorstelt werd in acht gehouden. Dit proces werd 29 keer herhaald, de resultaten werden gebundeld en geëvalueerd. 
 
 \subsubsection{Correctheid - 2. Menssegmentatie}
 Bij de evaluatie van de menssegmentatie werd er gekeken of het computergegenereerde oppervlak overeenkwam met de vorm van de daadwerkelijke persoon. De foute zones werden aangeduid met markeringen om een duidelijk overzicht te krijgen. Deze test werd ook 29 maal herhaald voor elk framework, de resultaten werden telkens naast elkaar gelegd. Om deze eigenschap te evalueren werd een puntensysteem toegepast, elke keer werd een punt uitgedeeld aan het framework die de persoon het beste kon omkaderen. Het framework die na de 29ste test het meeste punten had, werd verkozen als 'winnaar'.
 
 \subsubsection{Correctheid - 3. Luchtsegmentatie}
-Luchtsegmentatie werd op dezelfde manier beoordeeld als menssegmentatie. Deze twee segmentaties hebben een zeer gelijkaardige input en output, maar toch is er een groot verschil binnenin het framework. Het algoritme wordt op een andere manier getraind en zo is er toch een mogelijkheid dat deze twee segmentaties voor verschillende resultaten zorgen. Alsook werd deze 29 keer getest, het evaluatieproces werd op dezelfde manier uitgeoefend als bij menssegmentatie.
+Luchtsegmentatie werd op dezelfde manier beoordeeld als menssegmentatie. Deze twee segmentaties hebben een zeer gelijkaardige input en output, maar toch is er een groot verschil binnenin het framework. Het algoritme wordt op een andere manier getraind en zo is er toch een mogelijkheid dat deze twee segmentaties voor verschillende resultaten zorgen. Alsook werd deze eigenschap 29 keer getest, het evaluatieproces werd op dezelfde manier uitgeoefend als bij menssegmentatie.
 
 \subsubsection{Correctheid - 4. Segmentatie binnen gebouwen}
 Segmentatie binnen gebouwen is de uitwerking die het meest gerelateerd is met de AI-output die voor deze bachelorproef van belang is. Het biedt namelijk de mogelijkheid om muren van grond te onderscheiden, dit is de hoofdreden waarom AI in deze wayfinding-uitwerking is betrokken. Het is dus belangrijk dat deze AI-uitwerking grondig wordt geëvalueerd.
@@ -81,14 +80,14 @@ De evaluatie verliep als volgt, voor beide AI-frameworks werd op identiek dezelf
 Een tweede belangrijke factor is de toegelankelijkheid van de AI-frameworks voor verschillende platformen. Zo is het belangrijk voor het bedrijf 'In The Pocket' dat ze een oplossing vinden dat schaalbaar is.
 
 \subsubsection{Consistentie}
-De derde en laatste factor die onder de loep werd genomen is consistentie. Dit is een zeer cruciale factor binnen de wayfinding-context, het is belangrijk dat de eindgebruiker zich telkens op een correcte manier naar eindbestemming kan begeven met behulp van de toekomstige app, en niet in bv. 70 \% van de gevallen.
+De derde en laatste factor die onder de loep werd genomen is consistentie. Dit is een zeer cruciale factor binnen de wayfinding-context, het is belangrijk dat de eindgebruiker zich telkens op een correcte manier naar de eindbestemming kan begeven met behulp van de toekomstige app, en niet in bv. 70 \% van de gevallen.
 
 \subsection{Bepalen van optimaal AI-framework}
 Het bepalen van welk AI-framework de optimale oplossing biedt werd gemaakt op basis van een overzicht van alle testen. Dit overzicht bevat staafdiagrammen die de resultaten van alle testen in kaart brengt, zo is het mogelijk om rekening te houden met de verschillende eigenschappen die elk framework te bieden heeft.
 
 \chapter{\IfLanguageName{dutch}{Onderzoek}{Research}}
 \label{ch:onderzoek}
-In dit hoofdstuk zal de effectieve uitwerking van het onderzoek toegelicht worden. In het vorige hoofdstuk werd reeds het 'raamwerk' geschetst, dit hoofdstuk zal hier dus op verder gaan. In dit hoofdstuk zullen volgende zaken toegelicht worden:
+In dit hoofdstuk zal de effectieve uitwerking van het onderzoek toegelicht worden. In het vorige hoofdstuk werd reeds het 'raamwerk' geschetst, dit hoofdstuk zal hier dus op verder gaan. In dit hoofdstuk zullen volgende zaken worden toegelicht:
 
 \begin{itemize}
 	\item De AI-eigenschappen van elk framework valideren naargelang een vooropgestelde trainingset
@@ -100,7 +99,7 @@ In deze sectie zullen de effectieve tests worden uitgevoerd, de resultaten van e
 
 \subsection{Objectdetectie}
 
-Zoals eerder al werd vermeld is objectdetectie een belangrijke factor binnen de wayfinding-context, men zal namelijk moeten weten waar elk object binnen een bepaalde kamer zich bevindt. Om dit op een goede manier te kunnen testen werden er vijf verschillende objecten genomen en getest of het framework de verschillende waarnemingen kon constateren. Om de resultaten te kunnen meten werd gebruik gemaakt van twee verschillende applicaties, 'Fritz AI Studio' en 'TFL Detect', beide applicaties werden uitgevoerd op een iPhone 11 (camera: 12MP). Beide frameworks maakten immers gebruik van de COCO-dataset.
+Zoals eerder al werd vermeld is objectdetectie een belangrijke factor binnen de wayfinding-context, men zal namelijk moeten weten waar elk object binnen een bepaalde kamer zich bevindt. Om dit op een goede manier te kunnen testen werden er vier verschillende objecten genomen en getest of het framework de verschillende waarnemingen kon constateren. Om de resultaten te kunnen meten werd gebruik gemaakt van twee verschillende applicaties, 'Fritz AI Studio' en 'TFL Detect', beide applicaties werden uitgevoerd op een iPhone 11 (camera: 12MP). Beide frameworks maakten immers gebruik van de COCO-dataset.
 
 
 \subsubsection{Tests}
@@ -116,14 +115,14 @@ In het bovenstaande voorbeeld van de eerste objectdetectie-test kan u reeds waar
 	\includegraphics[scale=0.28]{ObjectDetection_Person.png}
 	\caption{Test met persoon, TensorFlow Lite (82 \%) \& CoreML (100 \%)}
 \end{figure}
-De tweede test werd uitgevoerd zoals de bovenstaande foto , deze proef toont nogmaals aan dat CoreML beter scoort. De persoon wordt veel exacter aangeduid met behulp van de rechthoek. Het correctheidspercentage is nogmaals beter bij het CoreML-framework, er kan zelfs worden opgemerkt dat dit framework met 100\% zekerheid kan zeggen dat het object een persoon is, dit resultaat is zeer opmerkelijk. Om te testen of de AI-frameworks consistent acteren werd dit redeneringsproces ook 29 maal herhaald.
+De tweede test werd uitgevoerd zoals de bovenstaande foto, deze proef toont nogmaals aan dat CoreML beter scoort. De persoon wordt veel exacter aangeduid met behulp van de rechthoek. Het correctheidspercentage is nogmaals beter bij het CoreML-framework, er kan zelfs worden opgemerkt dat dit framework met 100\% zekerheid kan zeggen dat het object een persoon is, dit resultaat is zeer opmerkelijk. Om te testen of de AI-frameworks consistent acteren werd dit redeneringsproces ook 29 maal herhaald.
 
 \begin{figure}[H]
 	\centering
 	\includegraphics[scale=0.35]{ObjectDetection_Bottle.png}
 	\caption{Test met waterfles, TensorFlow Lite (57 \%) \& CoreML (90 \%)}
 \end{figure}
-In het uitgewerke voorbeeld kan er opnieuw worden besloten dat het framework van Apple een betere zaak doet om de waterfles te herkennen. Opnieuw kan er een significant correctheidsverschil worden opgemerkt tussen beide frameworks. CoreML kan in dit geval met bijna 30 \% meer zekerheid zeggen dat het vertoonde object een fles is. Ook voor dit object werd deze test 29 maal herhaald.
+In het uitgewerkte voorbeeld kan er opnieuw worden besloten dat het framework van Apple een betere zaak doet om de waterfles te herkennen. Opnieuw kan er een significant correctheidsverschil worden opgemerkt tussen beide frameworks. CoreML kan in dit geval met bijna 30 \% meer zekerheid zeggen dat het vertoonde object een fles is. Ook voor dit object werd deze test 29 maal herhaald.
 \begin{figure}[H]
 	\centering
 	\includegraphics[scale=0.38]{ObjectDetection_Clock.png}
@@ -131,56 +130,49 @@ In het uitgewerke voorbeeld kan er opnieuw worden besloten dat het framework van
 \end{figure}
 Andermaal kan u waarnemen dat het CoreML-framework betere resultaten levert als TensorFlow Lite, er kan in dit geval wel worden opgemerkt dat de detectie a.d.h.v de rechthoek nauwkeuriger werd uitgevoerd door het TensorFlow Lite-framework. Opnieuw kan er een nauwkeurigheidsverschil worden gedetecteerd van meer dan 20 \%. Dit redeneringsproces werd ook 29 maal herhaald om te achterhalen of de resultaten wel consistent zijn.
 
-\begin{figure}[H]
-	\centering
-	\includegraphics[scale=0.38]{ObjectDetection_Laptop.png}
-	\caption{Test met laptop, TensorFlow Lite (75 \%) \& CoreML (95 \%)}
-\end{figure}
-De laatste test verschilt van de anderen, in het voorbeeld kan en namelijk zien dat TensorFlow Lite het toestenbord kan bespeuren, terwijl CoreML niet in staat is om dit te doen. De nauwkeurigheid kent wel lagere cijfers, opnieuw is er een verschil van 20 \% op vlak van accuraatheid. Alsook de laptoptest werd 29 maal herhaald. 
 	
 
 \subsection{Menssegmentatie}
 De tweede AI-eigenschap die werd getest is menssegmentatie, in deze eigenschap zal het framework de volledige foto gaan onderzoeken of er zich mensen in begeven. Indien er zich mensen in het beeld bevinden zal het algoritme deze aanduiden door een bepaald kleuroppervlak over deze objecten te plaatsen. De resultaten werden bekomen door gebruik te maken van de 'Fritz AI Studio' applicatie op twee verschillende apparaten, namelijk een iPhone 11 (camera: 12MP) (iOS) en een Huawei P20 Lite (camera: 16MP) (Android). In de documentatie van de 'Fritz AI Studio' applicatie wordt aangegeven dat de Android-variant gebruik maakt van TensorFlow Lite en de iOS-variant CoreML utiliseert. Deze beide frameworks gebruiken hetzelfde voorgetrainde model, dit werd samengesteld door Fritz AI.
 
-\newpage
 \subsubsection{Test}
 
 \begin{figure}[H]
 	\centering
-	\includegraphics[scale=0.4]{PeopleSegmentation.png}
+	\includegraphics[scale=0.47]{PeopleSegmentation.png}
 	\caption{Test menssegmentatie, zonder foutaanduiding}
 \end{figure}
-Uit de resultaten van deze voorbeeldtest kan er opnieuw worden aanschouwd dat het CoreML-framework een veel betere uitslag levert dan TensorFlow Lite. Ondanks dezelfde dataset slaagt CoreML er in deze test toch in om de persoon in de afbeelding bijna 100 \% correct aan te duiden, de uitkomst van het andere framework is niet nauwkeurig en kent zelfs grove fouten. In dit voorbeeld kan u concluderen dat het CoreML-framework veel nauwkeuriger is. In de onderstaande afbeelding werden de foute zones aangeduid, de rode vlaktes tonen aan waar de persoon niet werd gedetecteerd, maar wel was. Het gele gebied duidt de zones aan waar de persoon werd gedetecteerd, maar niet was. Dit visueel redeneringsproces werd 29 maal herhaald, telkens kreeg het framework met de minste foute zones een punt, het framework dat na de 29ste test het meeste punt haalde zou dit deelexperiment 'winnen'.
+\pagebreak
+
+Uit de resultaten van deze voorbeeldtest kan er opnieuw worden aanschouwd dat het CoreML-framework een veel betere uitslag levert dan TensorFlow Lite. Ondanks dezelfde dataset slaagt CoreML er in deze test toch in om de persoon in de afbeelding bijna 100 \% correct aan te duiden, de uitkomst van het andere framework is niet nauwkeurig en kent zelfs grove fouten. In dit voorbeeld kan u concluderen dat het CoreML-framework veel nauwkeuriger is. In de onderstaande afbeelding werden de foute zones aangeduid, de rode vlaktes tonen aan waar de persoon niet werd gedetecteerd, maar wel was. Het gele gebied duidt de zones aan waar de persoon werd gedetecteerd, maar niet was. Dit visueel redeneringsproces werd 29 maal herhaald, telkens kreeg het framework met de minste foute zones een punt, het framework dat na de 29ste test het meeste punten haalde zou dit deelexperiment 'winnen'.
 
  De link tussen menssegmentatie en de wayfinding-context kan misschien ver te zoeken zijn, maar deze test zegt wel degelijk meer over de precisie van het AI-framework. Alsook is het mogelijk dat een groep mensen de weg kan versperren, in dit geval is het belangrijk dat deze groep wordt gedetecteerd door het algoritme, een zekere mensherkenning en detectie is dus zeker van belang.
 
 \begin{figure}[H]
 	\centering
-	\includegraphics[scale=0.45]{PeopleSegmentation_MetFoutAanduiding.png}
+	\includegraphics[scale=0.47]{PeopleSegmentation_MetFoutAanduiding.png}
 	\caption{Test menssegmentatie, met foutaanduiding}
 \end{figure}
-
+\pagebreak
 \subsection{Luchtsegmentatie}
-Om de AI-frameworks andermaal op nauwkeurig -en correctheid te testen, werd er gekozen om ook luchtsegmentatie te observeren. Luchtsegmentatie zal net zoals menssegmentatie gekleurde vlekken plaatsen over de regio's waar het framework lucht detecteert. Alsook kan u bij deze AI-eigenschap denken dat dit geen direct verband heeft met de wayfinding context, maar toch geeft dit een extra beeld over hoe correct en nauwkeurig het AI-algoritme de verschillende vlakken kan onderscheiden. Zoals eerder al werd aangegeven in de methodologie zullen de foute zones worden aangeduid, het algoritme met het merendeel aan foute zones zal mogelijks niet worden geselecteerd als 'eindwinnaar'. Om deze test te kunnen uitvoeren werd de applicatie 'AI Fritz Studio' gebruikt, ook in dit onderzoek werd de applicatie beproeft op twee verschillende apparaten. Het CoreML-framework werd getest op een iPhone 11 (camera: 12MP), TensorFlow Lite werd uitgevoerd op een Huawei P20 Lite (camera: 16MP) (Android). Beide frameworks werden getraind met een dataset die werd opgesteld door Fritz AI.
+Om de AI-frameworks andermaal op nauwkeurig -en correctheid te testen, werd er gekozen om ook luchtsegmentatie te observeren. Luchtsegmentatie zal net zoals menssegmentatie gekleurde vlekken plaatsen over de regio's waar het framework lucht detecteert. Alsook kan u bij deze AI-eigenschap denken dat dit geen direct verband heeft met de wayfinding context, maar toch geeft dit een extra beeld over hoe correct en nauwkeurig het AI-algoritme de verschillende vlakken kan onderscheiden. Zoals eerder al werd aangegeven in de methodologie zullen de foute zones worden aangeduid, het algoritme met het merendeel aan foute zones zal mogelijks niet worden geselecteerd als 'eindwinnaar'. Om deze test te kunnen uitvoeren werd de applicatie 'AI Fritz Studio' gebruikt, ook in dit onderzoek werd de applicatie beproeft op twee verschillende apparaten. Het CoreML-framework werd getest op een iPhone 11 (camera: 12MP) (iOS), TensorFlow Lite werd uitgevoerd op een Huawei P20 Lite (camera: 16MP) (Android). Beide frameworks werden getraind met een dataset die werd opgesteld door Fritz AI.
 
-\newpage
 \subsubsection{Test}
 \begin{figure}[H]
 	\centering
-	\includegraphics[scale=0.4]{SkySegmentation.png}
+	\includegraphics[scale=0.47]{SkySegmentation.png}
 	\caption{Test luchtsegmentatie, zonder foutaanduiding}
 \end{figure}
-
-De test om de uitkomst van luchtsegmentatie te bekomen werd uitgevoerd in Lissabon in een hotelkamer. Het uitzicht bevat een antenne die de algoritmen een extra moeilijkheid zou kunnen bezorgen bij het uitvoeren van dit experiment, de resultaten zijn dan ook zeer interessant. In de onderstaande foto kan u de foute zones waarnemen, deze worden  aangegeven door middel van de roze zones. Er kan ook alvast worden opgemerkt dat de beeldkwaliteit van de camera een grote rol speelt bij dit experiment. De zeer kleine vlakken tussen de spaken van de antenne zorgen voor foute resultaten. Er kan dus worden bepaald dat het voor beide frameworks moeilijk is om zeer kleine vlakken te koppelen aan een bepaald segment. Dit visueel redeneringsproces werd ook 29 maal herhaald, en ook hier werd een puntensysteem gebruikt om de eindwinnaar te bepalen. In elke test kreeg het framework met het minste aantal foute zones een punt, het framework met het meeste punten na de 29ste test werd bekroond als 'winnaar' van dit deelexperiment. Uit deze resultaten kan er dus verder worden bepaald of de frameworks voldoen aan de nodige aspecten op vlak van nauwkeurig -en correctheid.
+\pagebreak
+De test om de uitkomst van luchtsegmentatie te bekomen werd uitgevoerd in Lissabon in een hotelkamer. Het uitzicht bevat een antenne die de algoritmen een extra moeilijkheid zou kunnen bezorgen bij het uitvoeren van dit experiment, de resultaten zijn dan ook zeer interessant. In de onderstaande foto kan u de foute zones waarnemen, deze worden  aangegeven door middel van de roze zones. Er kan ook alvast worden opgemerkt dat de beeldkwaliteit van de camera een grote rol speelt bij dit experiment. De zeer kleine vlakken tussen de spaken van de antenne zorgen voor foute resultaten. Er kan dus worden besloten dat het voor beide frameworks moeilijk is om zeer kleine vlakken te koppelen aan een bepaald segment. Dit visueel redeneringsproces werd ook 29 maal herhaald, en ook hier werd een puntensysteem gebruikt om de eindwinnaar te bepalen. In elke test kreeg het framework met het minste aantal foute zones een punt, het framework met het meeste punten na de 29ste test werd bekroond als 'winnaar' van dit deelexperiment. Uit deze resultaten kan er dus verder worden bepaald of de frameworks voldoen aan de nodige aspecten op vlak van nauwkeurig -en correctheid.
 \begin{figure}[H]
 	\centering
-	\includegraphics[scale=0.4]{SkySegmentation_MetFoutAanduiding.png}
+	\includegraphics[scale=0.47]{SkySegmentation_MetFoutAanduiding.png}
 	\caption{Test luchtsegmentatie, met foutaanduiding}
 \end{figure}
 
-
 \subsection{Segmentatie binnen gebouwen}
-Segmentatie binnen gebouwen is de AI-eigenschap die het meeste zal doorwegen in het bepalen van het eindresultaat. De informatie die uit dit experiment kan worden vergaard leunt het dichtste bij wat nodig is om de wayfinding context te optimaliseren. Ten eerste is het zeer interessant om te zien hoe de AI-frameworks zullen reageren op de experimenten. Ten tweede is het ook zeer belangrijk om te weten of de bepaalde frameworks de muren of de grond binnen de opgegeven ruimte kan ontdekken + aanduiden. 
+Segmentatie binnen gebouwen is de AI-eigenschap die het meeste zal doorwegen in het bepalen van het eindresultaat. De informatie die uit dit experiment kan worden vergaard leunt het dichtste aan bij wat nodig is om de wayfinding context te optimaliseren. Ten eerste is het zeer interessant om te zien hoe de AI-frameworks zullen reageren op de experimenten. Ten tweede is het ook zeer belangrijk om te weten of de bepaalde frameworks de muren of de grond binnen de opgegeven ruimte kunnen ontdekken en aanduiden. 
 
 Tijdens het exploratief onderzoek was het niet vanzelfsprekend om twee uitgewerkte voorbeelden (TensorFlow Lite + CoreML) te vinden die gebruik maakten van dezelfde dataset. Daarom is het experiment als volgt te werk gegaan, er werden twee uitgewerkte voorbeelden getest die elk een verschillende dataset utiliseerden. Deze twee testresultaten kunnen dus niet rechtstreeks tegenover elkaar worden gezet. Alsnog is het mogelijk om deze te vergelijken met elkaar als er wordt geëvalueerd hoe goed beide frameworks in hun opzet zijn geslaagd. Het CoreML-framework werd getest door middel van de 'Fritz AI Studio' applicatie, deze maakt gebruik van een dataset die werd samengesteld door 'Fritz AI', de applicatie zal voornamelijk de muren aanduiden door middel van verschillende kleurvlekken. TensorFlow Lite werd getest door de 'Tiramisu' applicatie die werd gecreëerd door Christian Kauten, deze applicatie is vooral gericht op het herkennen van de grond. Beide tests werden uitgevoerd met een iPhone 11. (camera: 12MP).
 
@@ -197,7 +189,7 @@ De bovenstaande afbeelding toont hoe de eerste test is verlopen. Het TensorFlow 
 
 De gearceerde zones (wit voor TensorFlow Lite, rood voor CoreML) tonen aan welke plaatsen het framework niet kon detecteren, maar wel moesten gedetecteerd worden. Zoals eerder werd vermeld worden deze twee tests niet rechtstreeks met elkaar vergeleken, als het aantal gearceerde zones kritiekloos met elkaar zouden vergeleken worden, dan zou dit voor verkeerde resultaten zorgen. U kan namelijk constateren dat er veel meer muuroppervlaktes zijn dan grondoppervlaktes, de kans dat er dus meer fouten optreden bij het herkennen van de muren is dus groter. In de test die werd uitgevoerd in de bovenstaande foto is het duidelijk dat CoreML het beste presteert, TensorFlow Lite slaagt namelijk veel minder in zijn doel als het CoreML-framework. 
 
-Dit redeneringsproces werd 29 keer herhaald, op deze manier is het mogelijk om de consistentie van de frameworks testen,  'beginnersgeluk' wordt op deze manier vermeden. In elke iteratie werd gekeken welk framework het beste kon presteren in zijn doelopdracht, voor TensorFlow Lite werd er dus gekeken hoeveel grondoppervlakte het framework kon herkennen, hetzelfde werd bij CoreML gedaan, maar dan met betrekking tot muurherkenning. Het framework die het beste kon presteren kreeg in elke iteratie verdiende een punt. Na de 29ste iteratie werd gekeken welk framework de meeste punten had.
+Dit redeneringsproces werd 29 keer herhaald, op deze manier is het mogelijk om de consistentie van de frameworks te testen,  'beginnersgeluk' wordt op deze manier vermeden. In elke iteratie werd gekeken welk framework het beste kon presteren in zijn doelopdracht, voor TensorFlow Lite werd er dus gekeken hoeveel grondoppervlakte het framework kon herkennen, hetzelfde werd bij CoreML gedaan, maar dan met betrekking tot muurherkenning. Het framework die het beste kon presteren verdiende in elke iteratie een punt. Na de 29ste iteratie werd gekeken welk framework de meeste punten had.
 
 \subsubsection{Test 2}
 \begin{figure}[H]
@@ -205,11 +197,11 @@ Dit redeneringsproces werd 29 keer herhaald, op deze manier is het mogelijk om d
 	\includegraphics[scale=0.35]{ImageSegmentation_3.png}
 	\caption{Test 2: TensorFlow Lite (links) \& CoreML (rechts)}
 \end{figure}
-De tweede test verliep op dezelfde manier als de eerste (zie bovenstaande foto), alleen de locatie werd gewijzigd. Deze test werd uitgevoerd in een langere gang, op deze manier kon er getest worden of de frameworks ook het grondoppervlak en de muren kon herkennen die zich verder begeefden. 
+De tweede test verliep op dezelfde manier als de eerste (zie bovenstaande foto), alleen de locatie werd gewijzigd. Deze test werd uitgevoerd in een langere gang, op deze manier kon er getest worden of de frameworks ook het grondoppervlak en de muren kon herkennen die zich verder begaven. 
 
 Ook in deze test werd er gekeken naar de foute gearceerde zones (wit voor TensorFlow Lite, rood voor CoreML). De regels die werden toegepast in de eerste test werden ook gebruikt in deze test, in dit voorbeeld kan u ook opmerken dat er veel meer muren aanwezig zijn als grond.
 
-In deze test kan is het duidelijk dat het TensorFlow Lite-framework een beter resultaat oplevert als CoreML. CoreML slaagt in dit voorbeeld er niet in om het grootste deel van de muren aan te duiden. Dit redeneringsproces werd zoals de andere testen reeds 29 keer herhaald, de evaluatie verliep op dezelfde wijze als de eerste test.
+In deze test is het duidelijk dat het TensorFlow Lite-framework een beter resultaat oplevert als CoreML. CoreML slaagt in dit voorbeeld er niet in om het grootste deel van de muren aan te duiden. Dit redeneringsproces werd zoals de andere testen reeds 29 keer herhaald, de evaluatie verliep op dezelfde wijze als de eerste test.
 
 \subsubsection{Test 3}
 \begin{figure}[H]
@@ -230,7 +222,7 @@ In dit hoofdstuk zullen de resultaten besproken worden van de uitgevoerde testen
 \section{Objectdetectie}
 
 \subsection{Test met boek}
-De resultaten van de eerste objectdetectietest zijn opmerkelijk, er is namelijk een zeer groot verschil tussen de 2 frameworks. CoreML haalde een gemiddelde van 88.9 \% (standaardafwijking: 10.41) terwijl TensorFlow Lite maar een gemiddelde haalde van 53.83 \% (standaardafwijking: 3.41), dit wilt zeggen dat het TensorFlow Lite-framework slechts in 53 van de 100 gevallen het boek correct zal herkennen en detecteren. U kan wel constateren dat het CoreML-framework minder consistent is, de verschillende metingen zijn namelijk heel verpreid.
+De resultaten van de eerste objectdetectietest zijn opmerkelijk, er is namelijk een zeer groot verschil tussen de 2 frameworks. CoreML haalde een gemiddelde van 88.9 \% (standaardafwijking: 10.41) terwijl TensorFlow Lite maar een gemiddelde haalde van 53.83 \% (standaardafwijking: 3.41), dit wil zeggen dat het TensorFlow Lite-framework slechts in 53 van de 100 gevallen het boek correct zal herkennen en detecteren. U kan wel constateren dat het CoreML-framework minder consistent is, de verschillende metingen zijn namelijk heel verspreid.
 
 \begin{figure}[H]
 	\centering
@@ -318,7 +310,7 @@ Zoals eerder werd beschreven werd de segmentatie binnen gebouwen op drie verschi
 	\end{tabular}
 	\caption{Resultaten segmentatie binnen gebouwen: lange gang}
 \end{table}
-De resultaten van de test in de lange gang zijn ook zeer boeiend, deze test zou beproeven of de frameworks ook het grond -en muuroppervlak zouden detecteren over een langere afstand. Uit de resultaten kan is het duidelijk dat TensorFlow Lite opnieuw slechter presteert, maar in vergelijking met de vorige test kent het framework wel een groei. Opnieuw slaagt CoreML beter in zijn opzet, een daling was wel merkbaar op vlak van prestaties tegenover de vorige test (in de korte gang).
+De resultaten van de test in de lange gang zijn ook zeer boeiend, deze test zou beproeven of de frameworks ook het grond -en muuroppervlak zouden detecteren over een langere afstand. Uit de resultaten is het duidelijk dat TensorFlow Lite opnieuw slechter presteert, maar in vergelijking met de vorige test kent het framework wel een groei. Opnieuw slaagt CoreML beter in zijn opzet, een daling was wel merkbaar op vlak van prestaties tegenover de vorige test (in de korte gang).
 
 \subsubsection{Keuken}
 \begin{table}[H]
