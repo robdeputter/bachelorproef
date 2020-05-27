@@ -11,7 +11,7 @@
 %% mogelijke manier toegepast hebt om een antwoord te vinden op de
 %% onderzoeksvraag.
 
-In dit stuk van de bachelorproef wordt er toegelicht hoe het onderzoek tot stand werd gebracht. U kan hierin waarnemen hoe beslissingen werden genomen omtrent specifieke eigenschappen van de verschillende AI-frameworks. Dit hoofdstuk is verdeeld is vier subsecties, elk van hen verdiept zich meer in hoe elk bepaald stuk van het onderzoek werd gerealiseerd.
+In dit stuk van de bachelorproef wordt er toegelicht hoe het onderzoek tot stand werd gebracht. U kan hierin waarnemen hoe beslissingen werden genomen omtrent specifieke eigenschappen van de verschillende AI-frameworks. Dit hoofdstuk is verdeeld is drie subsecties, elk van hen verdiept zich meer in hoe elk bepaald stuk van het onderzoek werd gerealiseerd.
 
 \section{Voorbereiding}
 Deze subsectie verdiept zich in hoe het onderzoek werd uitgestippeld. Verschillende toenaderingen werden gezocht om een AI-framework op een zo goed mogelijke manier te kunnen evalueren, dit is vervolgens het raamwerk dat werd gebruikt als aanpak in de evaluatie. Er werd ook een extra exploratief onderzoek verwezenlijkt om reeds uitgewerkte voorbeelden te achterhalen die gebruik maakten van de concrete AI-frameworks. Op deze manier kon er snel getest worden of de frameworks aan de nodige eisen voldeden.
@@ -77,7 +77,7 @@ De evaluatie verliep als volgt, voor beide AI-frameworks werd op identiek dezelf
 \end{figure}
 
 \subsubsection{Toegankelijkheid}
-Een tweede belangrijke factor is de toegelankelijkheid van de AI-frameworks voor verschillende platformen. Zo is het belangrijk voor het bedrijf 'In The Pocket' dat ze een oplossing vinden dat schaalbaar is.
+Een tweede belangrijke factor is de toegankelijkheid van de AI-frameworks voor verschillende platformen. Zo is het belangrijk voor het bedrijf 'In The Pocket' dat ze een oplossing vinden dat schaalbaar is.
 
 \subsubsection{Consistentie}
 De derde en laatste factor die onder de loep werd genomen is consistentie. Dit is een zeer cruciale factor binnen de wayfinding-context, het is belangrijk dat de eindgebruiker zich telkens op een correcte manier naar de eindbestemming kan begeven met behulp van de toekomstige app, en niet in bv. 70 \% van de gevallen.
@@ -146,7 +146,7 @@ De tweede AI-eigenschap die werd getest is menssegmentatie, in deze eigenschap z
 
 Uit de resultaten van deze voorbeeldtest kan er opnieuw worden aanschouwd dat het CoreML-framework een veel betere uitslag levert dan TensorFlow Lite. Ondanks dezelfde dataset slaagt CoreML er in deze test toch in om de persoon in de afbeelding bijna 100 \% correct aan te duiden, de uitkomst van het andere framework is niet nauwkeurig en kent zelfs grove fouten. In dit voorbeeld kan u concluderen dat het CoreML-framework veel nauwkeuriger is. In de onderstaande afbeelding werden de foute zones aangeduid, de rode vlaktes tonen aan waar de persoon niet werd gedetecteerd, maar wel was. Het gele gebied duidt de zones aan waar de persoon werd gedetecteerd, maar niet was. Dit visueel redeneringsproces werd 29 maal herhaald, telkens kreeg het framework met de minste foute zones een punt, het framework dat na de 29ste test het meeste punten haalde zou dit deelexperiment 'winnen'.
 
- De link tussen menssegmentatie en de wayfinding-context kan misschien ver te zoeken zijn, maar deze test zegt wel degelijk meer over de precisie van het AI-framework. Alsook is het mogelijk dat een groep mensen de weg kan versperren, in dit geval is het belangrijk dat deze groep wordt gedetecteerd door het algoritme, een zekere mensherkenning en detectie is dus zeker van belang.
+ De link tussen menssegmentatie en de wayfinding-context kan misschien ver te zoeken zijn, maar deze test zegt wel degelijk meer over de precisie van het AI-framework. Alsook is het mogelijk dat een groep mensen de weg kan versperren, in dit geval is het belangrijk dat deze groep wordt gedetecteerd door het algoritme. Een zekere mensherkenning en detectie is dus zeker van belang.
 
 \begin{figure}[H]
 	\centering
@@ -155,7 +155,7 @@ Uit de resultaten van deze voorbeeldtest kan er opnieuw worden aanschouwd dat he
 \end{figure}
 \pagebreak
 \subsection{Luchtsegmentatie}
-Om de AI-frameworks andermaal op nauwkeurig -en correctheid te testen, werd er gekozen om ook luchtsegmentatie te observeren. Luchtsegmentatie zal net zoals menssegmentatie gekleurde vlekken plaatsen over de regio's waar het framework lucht detecteert. Alsook kan u bij deze AI-eigenschap denken dat dit geen direct verband heeft met de wayfinding context, maar toch geeft dit een extra beeld over hoe correct en nauwkeurig het AI-algoritme de verschillende vlakken kan onderscheiden. Zoals eerder al werd aangegeven in de methodologie zullen de foute zones worden aangeduid, het algoritme met het merendeel aan foute zones zal mogelijks niet worden geselecteerd als 'eindwinnaar'. Om deze test te kunnen uitvoeren werd de applicatie 'AI Fritz Studio' gebruikt, ook in dit onderzoek werd de applicatie beproeft op twee verschillende apparaten. Het CoreML-framework werd getest op een iPhone 11 (camera: 12MP) (iOS), TensorFlow Lite werd uitgevoerd op een Huawei P20 Lite (camera: 16MP) (Android). Beide frameworks werden getraind met een dataset die werd opgesteld door Fritz AI.
+Om de AI-frameworks andermaal op nauwkeurig -en correctheid te testen, werd er gekozen om ook luchtsegmentatie te observeren. Luchtsegmentatie zal net zoals menssegmentatie gekleurde vlekken plaatsen over de regio's waar het framework lucht detecteert. Alsook kan u bij deze AI-eigenschap denken dat dit geen direct verband heeft met de wayfinding-context, maar toch geeft dit een extra beeld over hoe correct en nauwkeurig het AI-algoritme de verschillende vlakken kan onderscheiden. Zoals eerder al werd aangegeven in de methodologie zullen de foute zones worden aangeduid, het algoritme met het merendeel aan foute zones zal mogelijks niet worden geselecteerd als 'eindwinnaar'. Om deze test te kunnen uitvoeren werd de applicatie 'AI Fritz Studio' gebruikt, ook in dit onderzoek werd de applicatie beproeft op twee verschillende apparaten. Het CoreML-framework werd getest op een iPhone 11 (camera: 12MP) (iOS), TensorFlow Lite werd uitgevoerd op een Huawei P20 Lite (camera: 16MP) (Android). Beide frameworks werden getraind met een dataset die werd opgesteld door Fritz AI.
 
 \subsubsection{Test}
 \begin{figure}[H]
